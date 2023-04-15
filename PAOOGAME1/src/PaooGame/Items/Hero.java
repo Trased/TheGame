@@ -56,11 +56,11 @@ public class Hero extends Character
             ///Actualizeaza pozitia
         Move();
             ///Actualizeaza imaginea
-        if(refLink.GetKeyManager().left)
+        if(refLink.GetKeyManager().left == true)
         {
             image = Assets.heroLeft;
         }
-        if(refLink.GetKeyManager().right) {
+        if(refLink.GetKeyManager().right == true) {
             image = Assets.heroRight;
         }
     }

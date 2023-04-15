@@ -1,25 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f63f0bd-07c3-4259-ad3b-2a5ee33c327f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Items/Character.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Items/Character.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Items/Hero.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Items/Hero.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Maps/Map.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Maps/Map.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PaooGame/Items/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Items/Character.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PaooGame/Items/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Items/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PaooGame/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PaooGame/Maps/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Maps/Map.java" afterDir="false" />
-    </list>
+    <list default="true" id="9f63f0bd-07c3-4259-ad3b-2a5ee33c327f" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PaooGame/States/PlayState.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="19" column="119" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="119" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PaooGame/Game.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4828">
+              <caret line="297" column="4" selection-start-line="297" selection-start-column="4" selection-end-line="297" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#12568#12569#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/PaooGame/RefLinks.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="274">
+              <caret line="43" column="54" selection-start-line="43" selection-start-column="54" selection-end-line="43" selection-end-column="54" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PaooGame/Maps/Map.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="20" column="119" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="119" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PaooGame/States/SettingsState.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="16" column="119" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="119" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PaooGame/Items/Item.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="21" column="143" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="143" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PaooGame/States/MenuState.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="14" column="119" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="119" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PaooGame/Items/Hero.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1632">
+              <caret line="100" column="77" selection-start-line="100" selection-start-column="77" selection-end-line="100" selection-end-column="77" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PaooGame/States/AboutState.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="18" column="54" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PaooGame/States/State.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="6" column="74" selection-start-line="6" selection-start-column="74" selection-end-line="6" selection-end-column="74" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -38,13 +151,6 @@
     <dirStrings>
       <dir>D:\Work\AC\PAOO\PaooGameEtapa1\res</dir>
     </dirStrings>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/PaooGame/Game.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/PaooGame/Items/Hero.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -82,16 +188,12 @@
       </list>
     </option>
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1696" />
     <option name="height" value="1036" />
   </component>
-  <component name="ProjectId" id="2O1QVwUYht5nTan5NigVttEoXUU" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -112,16 +214,21 @@
       <pane id="Scope" />
     </panes>
   </component>
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "E:/!MyFiles/Fac/GITH/PLA/TheGame/PAOOGAME"
-  }
-}]]></component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="PaooGame.Main" />
@@ -139,7 +246,6 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -180,17 +286,6 @@
       <window_info anchor="right" id="Maven" order="4" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
     </layout>
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/res/textures/PaooGameSpriteSheet.png">
