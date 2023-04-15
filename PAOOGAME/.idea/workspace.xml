@@ -5,16 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f63f0bd-07c3-4259-ad3b-2a5ee33c327f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Graphics/SpriteSheet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Graphics/SpriteSheet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Items/Character.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Items/Character.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Items/Hero.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Items/Hero.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Maps/Map.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Maps/Map.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaooGame/Graphics/Assets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Graphics/Assets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaooGame/Graphics/SpriteSheet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Graphics/SpriteSheet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PaooGame/Items/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Items/Character.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PaooGame/Items/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Items/Hero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PaooGame/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PaooGame/Maps/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Maps/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaooGame/Tiles/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Tiles/Tile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

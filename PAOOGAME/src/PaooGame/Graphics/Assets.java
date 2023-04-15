@@ -34,7 +34,7 @@ public class Assets
     public static void Init()
     {
             /// Se creaza temporar un obiect SpriteSheet initializat prin intermediul clasei ImageLoader
-        SpriteSheet sheet = new SpriteSheet(ImageLoader.LoadImage("/textures/PaooGameSpriteSheet.png"));
+        SpriteSheet sheet = new SpriteSheet(ImageLoader.LoadImage("/textures/HomeMadeTileSet.png"));
 
             /// Se obtin subimaginile corespunzatoare elementelor necesare.
         grass = sheet.crop(0, 0);
