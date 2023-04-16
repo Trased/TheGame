@@ -14,10 +14,18 @@ public class Assets
     public static BufferedImage sand;
     public static BufferedImage grass;
     public static BufferedImage topGrass;
-    public static BufferedImage heroLeft;
-    public static BufferedImage heroRight;
-    public static BufferedImage heroUp;
-    public static BufferedImage heroDown;
+    public static BufferedImage heroLeftOne;
+    public static BufferedImage heroLeftTwo;
+    public static BufferedImage heroLeftThree;
+    public static BufferedImage heroRightOne;
+    public static BufferedImage heroRightTwo;
+    public static BufferedImage heroRightThree;
+    public static BufferedImage heroUpOne;
+    public static BufferedImage heroUpTwo;
+    public static BufferedImage heroUpThree;
+    public static BufferedImage heroDownOne;
+    public static BufferedImage heroDownTwo;
+    public static BufferedImage heroDownThree;
     public static BufferedImage townGrass;
 
     /*! \fn public static void Init()
@@ -33,10 +41,18 @@ public class Assets
         SpriteSheet character = new SpriteSheet(ImageLoader.LoadImage("/textures/CharacterSpriteSheet.png"));
 
             /// Se obtin subimaginile corespunzatoare elementelor necesare.
-        heroDown = character.crop(0,0);
-        heroLeft = character.crop(0,1);
-        heroRight = character.crop(0,2);
-        heroUp = character.crop(0,3);
+        heroDownOne = character.crop(0,0);
+        heroDownTwo = character.crop(1,0);
+        heroDownThree = character.crop(2,0);
+        heroLeftOne = character.crop(0,1);
+        heroLeftTwo = character.crop(1,1);
+        heroLeftThree = character.crop(2,1);
+        heroRightOne = character.crop(0,2);
+        heroRightTwo = character.crop(1,2);
+        heroRightThree = character.crop(2,2);
+        heroUpOne = character.crop(0,3);
+        heroUpTwo = character.crop(1,3);
+        heroUpThree = character.crop(2,3);
 
 
         stone = sheet.crop(9,5);

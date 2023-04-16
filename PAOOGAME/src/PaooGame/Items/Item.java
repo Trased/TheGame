@@ -20,6 +20,8 @@ public abstract class Item
     protected Rectangle normalBounds;   /*!< Dreptunghiul de coliziune aferent starii obisnuite(spatiul ocupat de entitate in mod normal), poate fi mai mic sau mai mare decat dimensiunea imaginii sale.*/
     protected Rectangle attackBounds;   /*!< Dreptunghiul de coliziune aferent starii de atac.*/
     protected RefLinks refLink;         /*!< O referinte catre un obiect "shortcut", obiect ce contine o serie de referinte utile in program.*/
+    public int SPRITE_COUNTER = 1;
+    public int SPRITE_NUM = 1;
 
     /*! \fn public Item(RefLinks refLink, float x, float y, int width, int height)
         \brief Constructor de initializare al clasei

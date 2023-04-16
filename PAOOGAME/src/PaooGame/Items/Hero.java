@@ -31,7 +31,7 @@ public class Hero extends Character
             ///Apel al constructorului clasei de baza
         super(refLink, x,y, Character.DEFAULT_CREATURE_WIDTH, Character.DEFAULT_CREATURE_HEIGHT);
             ///Seteaza imaginea de start a eroului
-        image = Assets.heroLeft;
+        image = Assets.heroLeftOne;
             ///Stabilieste pozitia relativa si dimensiunea dreptunghiului de coliziune, starea implicita(normala)
         normalBounds.x = 16;
         normalBounds.y = 16;
@@ -58,10 +58,48 @@ public class Hero extends Character
             ///Actualizeaza imaginea
         if(refLink.GetKeyManager().left)
         {
-            image = Assets.heroLeft;
+            if(SPRITE_NUM == 1){
+                image=Assets.heroLeftOne;
+            }
+            if(SPRITE_NUM == 2){
+                image = Assets.heroLeftTwo;
+            }
+            if(SPRITE_NUM == 3){
+                image = Assets.heroLeftThree;
+            }
         }
         if(refLink.GetKeyManager().right) {
-            image = Assets.heroRight;
+            if(SPRITE_NUM == 1) {
+                image = Assets.heroRightOne;
+            }
+            if(SPRITE_NUM == 2) {
+                image = Assets.heroRightTwo;
+            }
+            if(SPRITE_NUM == 3) {
+                image = Assets.heroRightThree;
+            }
+        }
+        if(refLink.GetKeyManager().up){
+            if(SPRITE_NUM == 1) {
+                image = Assets.heroUpOne;
+            }
+            if(SPRITE_NUM == 2) {
+                image = Assets.heroUpTwo;
+            }
+            if(SPRITE_NUM == 3) {
+                image = Assets.heroUpThree;
+            }
+        }
+        if(refLink.GetKeyManager().down){
+            if(SPRITE_NUM == 1) {
+                image = Assets.heroDownOne;
+            }
+            if(SPRITE_NUM == 2) {
+                image = Assets.heroDownTwo;
+            }
+            if(SPRITE_NUM == 3) {
+                image = Assets.heroDownThree;
+            }
         }
     }
 
@@ -92,6 +130,21 @@ public class Hero extends Character
         if(refLink.GetKeyManager().right)
         {
             xMove = speed;
+        }
+
+        // Cream efectul de animatie, la fiecare 8 frame-uri modificam imaginea personajului
+        // Numarul de frame-uri se poate mari/micsora pentru a modifica viteza de update a frame-urilor.
+        SPRITE_COUNTER++;
+        if(SPRITE_COUNTER > 8){
+            if(SPRITE_NUM == 1){
+                SPRITE_NUM = 2;
+            }
+            else if(SPRITE_NUM == 2) {
+                SPRITE_NUM = 3;
+            }else if(SPRITE_NUM == 3){
+                SPRITE_NUM = 1;
+            }
+            SPRITE_COUNTER = 0;
         }
     }
 
