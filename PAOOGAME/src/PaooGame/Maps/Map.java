@@ -49,6 +49,8 @@ public class Map
      */
     public void Draw(Graphics g)
     {
+        int row = 0;
+        int col = 0;
             ///Se parcurge matricea de dale (codurile aferente) si se deseneaza harta respectiva
         for(int y = 0; y < refLink.GetGame().GetHeight()/Tile.TILE_HEIGHT; y++)
         {
@@ -122,9 +124,7 @@ public class Map
             ///Definire statica a matricei de coduri de dale.
         int mapTile;
         try{
-            String line = Files.readAllLines(Paths.get("res/textures/HomeTownMap.txt")).get(y);
-            String numbers[] = line.split(" ");
-            mapTile = Integer.parseInt(numbers[x]);
+            mapTile = Integer.parseInt(Files.readAllLines(Paths.get("res/textures/HomeTownMap.txt")).get(y).split(" ")[x]);
         } catch(Exception e){
             mapTile = 1;
         }
@@ -136,9 +136,7 @@ public class Map
         ///Definire statica a matricei de coduri de dale.
         int mapTile;
         try{
-            String line = Files.readAllLines(Paths.get("res/textures/HomeTownMapObjects.txt")).get(y);
-            String numbers[] = line.split(" ");
-            mapTile = 5; // Integer.parseInt(numbers[x]); // TO BE FIXED ASAP !.!
+            mapTile = Integer.parseInt(Files.readAllLines(Paths.get("res/textures/HomeTownMapObjects.txt")).get(y).split(" ")[x]);
         } catch(Exception e){
             mapTile = 1;
         }

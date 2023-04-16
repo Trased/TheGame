@@ -19,6 +19,10 @@ public class Hero extends Character
 {
     private BufferedImage image;    /*!< Referinta catre imaginea curenta a eroului.*/
 
+    ///Fixam caracterul pe mijlocul ecranului
+    public final int screenX;
+    public final int screenY;
+
     /*! \fn public Hero(RefLinks refLink, float x, float y)
         \brief Constructorul de initializare al clasei Hero.
 
@@ -43,6 +47,10 @@ public class Hero extends Character
         attackBounds.y = 10;
         attackBounds.width = 38;
         attackBounds.height = 38;
+
+        screenX = refLink.GetWidth() / 2;
+        screenY = refLink.GetHeight() / 2;
+
     }
 
     /*! \fn public void Update()
@@ -156,7 +164,8 @@ public class Hero extends Character
     @Override
     public void Draw(Graphics g)
     {
-        g.drawImage(image, (int)x, (int)y, width, height, null);
+    //    g.drawImage(image, (int)x, (int)y, width, height, null);
+        g.drawImage(image, screenX, screenY, width, height, null);
 
             ///doar pentru debug daca se doreste vizualizarea dreptunghiului de coliziune altfel se vor comenta urmatoarele doua linii
         //g.setColor(Color.blue);
