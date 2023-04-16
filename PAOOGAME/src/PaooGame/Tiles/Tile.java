@@ -15,10 +15,11 @@ public class Tile
         /// o singura data in memorie
     public static Tile stoneTile        = new StoneTile(0);
     public static Tile grassTile        = new GrassTile(1);
+    public static Tile townGrass        =new townGrassTile(2);
     public static Tile sandtile         = new SandTile(3);
     public static Tile topGrass         = new topGrassTile(4);
-    public static Tile townGrass        =new townGrassTile(2);
 
+//    public static Tile FirstHomeTileOne = new FirstHomeTileOne(5);
     public static final int TILE_WIDTH  = 32;                       /*!< Latimea unei dale.*/
     public static final int TILE_HEIGHT = 32;                       /*!< Inaltimea unei dale.*/
 

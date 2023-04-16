@@ -7,6 +7,8 @@ import java.awt.*;
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 /*! \class public class Map
     \brief Implementeaza notiunea de harta a jocului.
@@ -96,7 +98,15 @@ public class Map
         {
             for(int x = 0; x < width; x++)
             {
-                tiles[x][y] = MiddleEastMap(x,y);
+                tiles[x][y] = HomeTownMap(x,y);
+            }
+        }
+        objectTiles = new int[width][height];
+        for(int y = 0; y < height; y++)
+        {
+            for(int x = 0; x < width; x++)
+            {
+                objectTiles[x][y] = HomeTownMapObjects(x,y);
             }
         }
     }
@@ -107,33 +117,32 @@ public class Map
         \param x linia pe care se afla codul dalei de interes.
         \param y coloana pe care se afla codul dalei de interes.
      */
-    private int MiddleEastMap(int x ,int y)
+    private int HomeTownMap(int x ,int y)
     {
             ///Definire statica a matricei de coduri de dale.
-        int map[][] = new int[60][40];
+        int mapTile;
         try{
-            InputStream is = getClass().getResourceAsStream("/textures/home.txt");
-            BufferedReader br = new BufferedReader(new InputStreamReader(is));
-            int col = 0;
-            int row = 0;
-            while(row < 40){
-                String line = br.readLine();
-                while(col < 60){
-                    String numbers[] = line.split(" ");
-                    int num = Integer.parseInt(numbers[col]);
-                    map[row][col] = num;
-                    col++;
-                }
-                if(col == 60){
-                    col = 0;
-                    row++;
-                }
-            }
-            br.close();
+            String line = Files.readAllLines(Paths.get("res/textures/HomeTownMap.txt")).get(y);
+            String numbers[] = line.split(" ");
+            mapTile = Integer.parseInt(numbers[x]);
         } catch(Exception e){
-
+            mapTile = 1;
         }
 
-        return map[x][y];
+        return mapTile;
+    }
+    private int HomeTownMapObjects(int x ,int y)
+    {
+        ///Definire statica a matricei de coduri de dale.
+        int mapTile;
+        try{
+            String line = Files.readAllLines(Paths.get("res/textures/HomeTownMapObjects.txt")).get(y);
+            String numbers[] = line.split(" ");
+            mapTile = 5; // Integer.parseInt(numbers[x]); // TO BE FIXED ASAP !.!
+        } catch(Exception e){
+            mapTile = 1;
+        }
+
+        return mapTile;
     }
 }
