@@ -14,6 +14,7 @@ public class Assets
     public static BufferedImage sand;
     public static BufferedImage grass;
     public static BufferedImage topGrass;
+    public static BufferedImage bottomGrass;
     public static BufferedImage heroLeftOne;
     public static BufferedImage heroLeftTwo;
     public static BufferedImage heroLeftThree;
@@ -27,6 +28,7 @@ public class Assets
     public static BufferedImage heroDownTwo;
     public static BufferedImage heroDownThree;
     public static BufferedImage townGrass;
+
 
     /*! \fn public static void Init()
         \brief Functia initializaza referintele catre elementele grafice utilizate.
@@ -59,6 +61,8 @@ public class Assets
         sand = sheet.crop(6,4);
         grass = sheet.crop(5, 3);
         topGrass = sheet.crop(3,4);
+        bottomGrass = sheet.crop(0,4);
         townGrass = sheet.crop(1, 2);
+
     }
 }
