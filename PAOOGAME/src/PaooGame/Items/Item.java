@@ -35,7 +35,7 @@ public abstract class Item
     public Item(RefLinks refLink, float x, float y, int width, int height)
     {
         this.x = x;             /*!< Retine coordonata pe axa X.*/
-        this.y = y;             /*!< Retine coordonata pe axa X.*/
+        this.y = y;             /*!< Retine coordonata pe axa Y.*/
         this.width = width;     /*!< Retine latimea imaginii.*/
         this.height = height;   /*!< Retine inaltimea imaginii.*/
         this.refLink = refLink; /*!< Retine the "shortcut".*/

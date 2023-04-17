@@ -139,7 +139,7 @@ public class Game implements Runnable
         final double timeFrame      = 1000000000 / framesPerSecond; /*!< Durata unui frame in nanosecunde.*/
 
             /// Atat timp timp cat threadul este pornit Update() & Draw()
-        while (runState == true)
+        while (runState)
         {
                 /// Se obtine timpul curent
             curentTime = System.nanoTime();
@@ -163,7 +163,7 @@ public class Game implements Runnable
      */
     public synchronized void StartGame()
     {
-        if(runState == false)
+        if(!runState)
         {
                 /// Se actualizeaza flagul de stare a threadului
             runState = true;
@@ -187,7 +187,7 @@ public class Game implements Runnable
      */
     public synchronized void StopGame()
     {
-        if(runState == true)
+        if(runState)
         {
                 /// Actualizare stare thread
             runState = false;

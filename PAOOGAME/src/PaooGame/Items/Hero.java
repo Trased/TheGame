@@ -122,7 +122,7 @@ public class Hero extends Character
             ///Verificare apasare tasta "sus"
         if(refLink.GetKeyManager().up)
         {
-            yMove = -speed;
+            yMove  = -speed;
         }
             ///Verificare apasare tasta "jos"
         if(refLink.GetKeyManager().down)
@@ -164,7 +164,7 @@ public class Hero extends Character
     @Override
     public void Draw(Graphics g)
     {
-    //    g.drawImage(image, (int)x, (int)y, width, height, null);
+      // g.drawImage(image, (int)x, (int)y, width, height, null);
         g.drawImage(image, screenX, screenY, width, height, null);
 
             ///doar pentru debug daca se doreste vizualizarea dreptunghiului de coliziune altfel se vor comenta urmatoarele doua linii

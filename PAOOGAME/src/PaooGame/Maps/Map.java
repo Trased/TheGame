@@ -1,5 +1,6 @@
 package PaooGame.Maps;
 
+import PaooGame.Items.Hero;
 import PaooGame.RefLinks;
 import PaooGame.Tiles.Tile;
 
@@ -47,19 +48,37 @@ public class Map
 
         \param g Contextl grafi in care se realizeaza desenarea.
      */
-    public void Draw(Graphics g)
-    {
+
+    public void Draw(Graphics g) {
         int row = 0;
         int col = 0;
-            ///Se parcurge matricea de dale (codurile aferente) si se deseneaza harta respectiva
+        ///Se parcurge matricea de dale (codurile aferente) si se deseneaza harta respectiva
+        for (int y = 0; y < refLink.GetGame().GetHeight() / Tile.TILE_HEIGHT; y++) {
+            for (int x = 0; x < refLink.GetGame().GetWidth() / Tile.TILE_WIDTH; x++) {
+                GetTile(x, y).Draw(g, (int) x * Tile.TILE_HEIGHT, (int) y * Tile.TILE_WIDTH);
+            }
+        }
+    }
+/*
+    public void Draw(Graphics g, Hero character){
+        int charX = (int) character.GetX() - character.screenX / Tile.TILE_WIDTH;
+        int charY = (int) character.GetY() - character.screenY / Tile.TILE_HEIGHT;
+        int offsetX = charX * Tile. TILE_WIDTH;
+        int offsetY = charY * Tile.TILE_HEIGHT;
+
         for(int y = 0; y < refLink.GetGame().GetHeight()/Tile.TILE_HEIGHT; y++)
         {
             for(int x = 0; x < refLink.GetGame().GetWidth()/Tile.TILE_WIDTH; x++)
             {
-                GetTile(x, y).Draw(g, (int)x * Tile.TILE_HEIGHT, (int)y * Tile.TILE_WIDTH);
+                int mapX = x + charX;
+                int mapY = y + charY;
+                if(mapX >= 0 && mapX < 960 && mapY >= 0 && mapY < 640) {
+                    GetTile(mapX, mapY).Draw(g, x * Tile.TILE_WIDTH - offsetX, y * Tile.TILE_HEIGHT - offsetY);
+                }
             }
         }
-    }
+
+    }*/
 
     /*! \fn public Tile GetTile(int x, int y)
         \brief Intoarce o referinta catre dala aferenta codului din matrice de dale.
