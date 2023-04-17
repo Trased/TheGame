@@ -6,6 +6,8 @@ import java.awt.image.BufferedImage;
 import PaooGame.RefLinks;
 import PaooGame.Graphics.Assets;
 
+import static java.lang.Math.sqrt;
+
 /*! \class public class Hero extends Character
     \brief Implementeaza notiunea de erou/player (caracterul controlat de jucator).
 
@@ -39,7 +41,7 @@ public class Hero extends Character
             ///Stabilieste pozitia relativa si dimensiunea dreptunghiului de coliziune, starea implicita(normala)
         normalBounds.x = 16;
         normalBounds.y = 16;
-        normalBounds.width = 16;
+        normalBounds.width = 24;
         normalBounds.height = 32;
 
             ///Stabilieste pozitia relativa si dimensiunea dreptunghiului de coliziune, starea de atac
@@ -50,6 +52,7 @@ public class Hero extends Character
 
         screenX = refLink.GetWidth() / 2;
         screenY = refLink.GetHeight() / 2;
+
 
     }
 
@@ -64,6 +67,28 @@ public class Hero extends Character
             ///Actualizeaza pozitia
         Move();
             ///Actualizeaza imaginea
+        if(refLink.GetKeyManager().up){
+            if(SPRITE_NUM == 1) {
+                image = Assets.heroUpOne;
+            }
+            if(SPRITE_NUM == 2) {
+                image = Assets.heroUpTwo;
+            }
+            if(SPRITE_NUM == 3) {
+                image = Assets.heroUpThree;
+            }
+        }
+        if(refLink.GetKeyManager().down){
+            if(SPRITE_NUM == 1) {
+                image = Assets.heroDownOne;
+            }
+            if(SPRITE_NUM == 2) {
+                image = Assets.heroDownTwo;
+            }
+            if(SPRITE_NUM == 3) {
+                image = Assets.heroDownThree;
+            }
+        }
         if(refLink.GetKeyManager().left)
         {
             if(SPRITE_NUM == 1){
@@ -87,28 +112,6 @@ public class Hero extends Character
                 image = Assets.heroRightThree;
             }
         }
-        if(refLink.GetKeyManager().up){
-            if(SPRITE_NUM == 1) {
-                image = Assets.heroUpOne;
-            }
-            if(SPRITE_NUM == 2) {
-                image = Assets.heroUpTwo;
-            }
-            if(SPRITE_NUM == 3) {
-                image = Assets.heroUpThree;
-            }
-        }
-        if(refLink.GetKeyManager().down){
-            if(SPRITE_NUM == 1) {
-                image = Assets.heroDownOne;
-            }
-            if(SPRITE_NUM == 2) {
-                image = Assets.heroDownTwo;
-            }
-            if(SPRITE_NUM == 3) {
-                image = Assets.heroDownThree;
-            }
-        }
     }
 
     /*! \fn private void GetInput()
@@ -119,27 +122,37 @@ public class Hero extends Character
             ///Implicit eroul nu trebuie sa se deplaseze daca nu este apasata o tasta
         xMove = 0;
         yMove = 0;
-            ///Verificare apasare tasta "sus"
-        if(refLink.GetKeyManager().up)
-        {
-            yMove  = -speed;
-        }
-            ///Verificare apasare tasta "jos"
-        if(refLink.GetKeyManager().down)
-        {
-            yMove = speed;
-        }
-            ///Verificare apasare tasta "left"
-        if(refLink.GetKeyManager().left)
-        {
-            xMove = -speed;
-        }
-            ///Verificare apasare tasta "dreapta"
-        if(refLink.GetKeyManager().right)
-        {
-            xMove = speed;
-        }
+        // Verificam coliziunea
 
+        collisionOn = false;
+        refLink.cCol.checkTile(this);
+        if(!collisionOn){
+            if(refLink.GetKeyManager().up && refLink.GetKeyManager().left){
+                yMove = (float) (-speed/sqrt(2.0));
+                xMove = (float) (-speed/sqrt(2.0));
+            }else if(refLink.GetKeyManager().up && refLink.GetKeyManager().right){
+                yMove = (float) (-speed/sqrt(2.0));
+                xMove = (float) (speed/sqrt(2.0));
+            }else if(refLink.GetKeyManager().down && refLink.GetKeyManager().left){
+                yMove = (float) (speed/sqrt(2.0));
+                xMove = (float) (-speed/sqrt(2.0));
+            }else if(refLink.GetKeyManager().down && refLink.GetKeyManager().right){
+                yMove = (float) (speed/sqrt(2.0));
+                xMove = (float) (speed/sqrt(2.0));
+            }else if(refLink.GetKeyManager().up)
+            {
+                yMove  = -speed;
+            }else if(refLink.GetKeyManager().down)
+            {
+                yMove = speed;
+            }else if(refLink.GetKeyManager().left)
+            {
+                xMove = -speed;
+            }else if(refLink.GetKeyManager().right)
+            {
+                xMove = speed;
+            }
+        }
         // Cream efectul de animatie, la fiecare 8 frame-uri modificam imaginea personajului
         // Numarul de frame-uri se poate mari/micsora pentru a modifica viteza de update a frame-urilor.
         SPRITE_COUNTER++;
@@ -164,11 +177,11 @@ public class Hero extends Character
     @Override
     public void Draw(Graphics g)
     {
-      // g.drawImage(image, (int)x, (int)y, width, height, null);
-        g.drawImage(image, screenX, screenY, width, height, null);
+       g.drawImage(image, (int)x, (int)y, width, height, null);
+      //  g.drawImage(image, screenX, screenY, width, height, null);
 
             ///doar pentru debug daca se doreste vizualizarea dreptunghiului de coliziune altfel se vor comenta urmatoarele doua linii
-        //g.setColor(Color.blue);
-        //g.fillRect((int)(x + bounds.x), (int)(y + bounds.y), bounds.width, bounds.height);
+        g.setColor(Color.blue);
+        g.fillRect((int)(x + bounds.x), (int)(y + bounds.y), bounds.width, bounds.height);
     }
 }

@@ -25,7 +25,8 @@ public class Tile
     public static final int TILE_HEIGHT = 32;                       /*!< Inaltimea unei dale.*/
 
     protected BufferedImage img;                                    /*!< Imaginea aferenta tipului de dala.*/
-    protected final int id;                                         /*!< Id-ul unic aferent tipului de dala.*/
+    protected final int id;/*!< Id-ul unic aferent tipului de dala.*/
+    public boolean collision = false;
 
     /*! \fn public Tile(BufferedImage texture, int id)
         \brief Constructorul aferent clasei.
@@ -67,7 +68,7 @@ public class Tile
      */
     public boolean IsSolid()
     {
-        return false;
+        return collision;
     }
 
     /*! \fn public int GetId()

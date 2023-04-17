@@ -14,5 +14,6 @@ public class StoneTile extends Tile {
     {
         /// Apel al constructorului clasei de baza
         super(Assets.stone, id);
+        this.collision = true;
     }
 }

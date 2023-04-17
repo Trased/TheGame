@@ -3,6 +3,7 @@ package PaooGame;
 import PaooGame.GameWindow.GameWindow;
 import PaooGame.Graphics.Assets;
 import PaooGame.Input.KeyManager;
+import PaooGame.Items.collisionChecker;
 import PaooGame.States.*;
 import PaooGame.Tiles.Tile;
 
@@ -69,7 +70,6 @@ public class Game implements Runnable
     private State aboutState;           /*!< Referinta catre about.*/
     private KeyManager keyManager;      /*!< Referinta catre obiectul care gestioneaza intrarile din partea utilizatorului.*/
     private RefLinks refLink;            /*!< Referinta catre un obiect a carui sarcina este doar de a retine diverse referinte pentru a fi usor accesibile.*/
-
     private Tile tile; /*!< variabila membra temporara. Este folosita in aceasta etapa doar pentru a desena ceva pe ecran.*/
 
     /*! \fn public Game(String title, int width, int height)

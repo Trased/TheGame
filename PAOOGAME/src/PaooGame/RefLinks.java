@@ -1,5 +1,6 @@
 package PaooGame;
 
+import PaooGame.Items.collisionChecker;
 import PaooGame.Maps.Map;
 
 import PaooGame.Input.KeyManager;
@@ -13,6 +14,7 @@ public class RefLinks
 {
     private Game game;          /*!< Referinta catre obiectul Game.*/
     private Map map;            /*!< Referinta catre harta curenta.*/
+    public collisionChecker cCol = new collisionChecker(this);
 
     /*! \fn public RefLinks(Game game)
         \brief Constructorul de initializare al clasei.

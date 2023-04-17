@@ -6,9 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="9f63f0bd-07c3-4259-ad3b-2a5ee33c327f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PaooGame/Graphics/Assets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Graphics/Assets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Items/Hero.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Items/Hero.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Items/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Items/Item.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaooGame/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaooGame/Items/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Items/Hero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaooGame/Items/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Items/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaooGame/RefLinks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/RefLinks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaooGame/Tiles/StoneTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Tiles/StoneTile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PaooGame/Tiles/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Tiles/Tile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PaooGame/Tiles/bottomGrassTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Tiles/bottomGrassTile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +45,7 @@
     <setting file="file://$PROJECT_DIR$/src/PaooGame/Game.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/PaooGame/GameWindow/GameWindow.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/PaooGame/Items/Hero.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/PaooGame/Items/collisionChecker.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/PaooGame/Maps/Map.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/PaooGame/RefLinks.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/PaooGame/States/PlayState.java" root0="SKIP_INSPECTION" />
@@ -166,6 +172,7 @@
       <updated>1584389919134</updated>
       <workItem from="1681731053850" duration="6691000" />
       <workItem from="1681738724477" duration="2710000" />
+      <workItem from="1681757939634" duration="5655000" />
     </task>
     <servers />
   </component>
