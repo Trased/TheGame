@@ -41,12 +41,13 @@ public class Map
 
     }
 
+
     /*! \fn public void Draw(Graphics g)
         \brief Functia de desenare a hartii.
 
         \param g Contextl grafi in care se realizeaza desenarea.
      */
-
+/*
     public void Draw(Graphics g) {
         ///Se parcurge matricea de dale (codurile aferente) si se deseneaza harta respectiva
         for (int y = 0; y < refLink.worldCol / Tile.TILE_HEIGHT; y++) {
@@ -54,20 +55,39 @@ public class Map
                 GetTile(x, y).Draw(g, (int) x * Tile.TILE_HEIGHT, (int) y * Tile.TILE_WIDTH);
             }
         }
-    }
-    /*
-        public void Draw(Graphics g, Hero player){
-            for (int y = 0; y < refLink.worldCol / Tile.TILE_HEIGHT; y++) {
-                for (int x = 0; x < refLink.worldRow / Tile.TILE_WIDTH; x++) {
-                    int worldX = y * 32;
-                    int worldY = x * 32;
-                    int screenX = (int) (worldX - player.GetX() + player.screenX);
-                    int screenY = (int) (worldY - player.GetY() + player.screenY);
-                    GetTile(x,y).Draw(g, (int) x * Tile.TILE_HEIGHT, (int) y * Tile.TILE_WIDTH);
-                }
+    }*/
+    public void Draw(Graphics g, Hero player)
+    {
+        int worldCol=0;
+        int worldRow=0;
+        //making the camera work - the player is stuck in the center but the world moves around him
+        while(worldCol < refLink.maxWorldCol && worldRow < refLink.maxWorldRow)
+        {
+            int worldx= worldCol*32;
+            int worldy=worldRow*32;
+            int screenX= (int) (worldx-player.GetX() + player.screenX);
+            int screenY= (int) (worldy-player.GetY() + player.screenY);
+
+            if (
+                    worldx + 32 > player.GetX() - player.screenX &&
+                            worldx - 32 < player.GetX() + player.screenX &&
+                            worldy + 32 > player.GetY() - player.screenY &&
+                            worldy - 32 < player.GetY() + player.screenY
+            )
+            //drawing only around the player until it meets the screen edges, not more - for efficiency’s sake
+            {
+               // g2.drawImage(tile[tileNumb].image, screenX, screenY, gp.tileSize, gp.tileSize, null);
+                GetTile(worldCol, worldRow).Draw(g, (int) worldCol * Tile.TILE_HEIGHT, (int) worldRow * Tile.TILE_WIDTH);
+            }
+            worldCol++;
+            if (worldCol==refLink.maxWorldCol)
+            {
+                worldCol = 0;
+                worldRow++;
             }
         }
-    */
+    }
+
     /*! \fn public Tile GetTile(int x, int y)
         \brief Intoarce o referinta catre dala aferenta codului din matrice de dale.
 

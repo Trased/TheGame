@@ -29,7 +29,7 @@ public class PlayState extends State
             ///Referinta catre harta construita este setata si in obiectul shortcut pentru a fi accesibila si in alte clase ale programului.
         refLink.SetMap(map);
             ///Construieste eroul
-        hero = new Hero(refLink,2* Tile.TILE_HEIGHT, 10*Tile.TILE_WIDTH); // x, y sunt coordonatele unde se spawneaza :: TO DO in viitor: SQL care retine unde e personajul la log-out!!
+        hero = new Hero(refLink,30* Tile.TILE_HEIGHT, 20*Tile.TILE_WIDTH); // x, y sunt coordonatele unde se spawneaza :: TO DO in viitor: SQL care retine unde e personajul la log-out!!
     }
 
     /*! \fn public void Update()
@@ -50,7 +50,7 @@ public class PlayState extends State
     @Override
     public void Draw(Graphics g)
     {
-        map.Draw(g);
+        map.Draw(g, hero);
         hero.Draw(g);
     }
 }
