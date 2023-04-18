@@ -126,7 +126,12 @@ public class Hero extends Character
         collisionOn = false;
         refLink.cCol.checkTile(this);
         if(!collisionOn){
-            if(refLink.GetKeyManager().up && refLink.GetKeyManager().left){
+            if(refLink.GetKeyManager().left && refLink.GetKeyManager().right && refLink.GetKeyManager().up && refLink.GetKeyManager().down){}
+            else if(refLink.GetKeyManager().left && refLink.GetKeyManager().right && refLink.GetKeyManager().up ){yMove = -speed;}
+            else if(refLink.GetKeyManager().left && refLink.GetKeyManager().right && refLink.GetKeyManager().down ){yMove = speed;}
+            else if(refLink.GetKeyManager().up && refLink.GetKeyManager().down && refLink.GetKeyManager().left ){xMove = -speed;}
+            else if(refLink.GetKeyManager().up && refLink.GetKeyManager().down && refLink.GetKeyManager().right ){xMove = speed;}
+            else if(refLink.GetKeyManager().up && refLink.GetKeyManager().left){
                 yMove = (float) (-speed/sqrt(2.0));
                 xMove = (float) (-speed/sqrt(2.0));
             }else if(refLink.GetKeyManager().up && refLink.GetKeyManager().right){
@@ -138,17 +143,14 @@ public class Hero extends Character
             }else if(refLink.GetKeyManager().down && refLink.GetKeyManager().right){
                 yMove = (float) (speed/sqrt(2.0));
                 xMove = (float) (speed/sqrt(2.0));
-            }else if(refLink.GetKeyManager().up)
-            {
+            }else if(refLink.GetKeyManager().up && refLink.GetKeyManager().down){}
+            else if(refLink.GetKeyManager().up) {
                 yMove  = -speed;
-            }else if(refLink.GetKeyManager().down)
-            {
+            }else if(refLink.GetKeyManager().down) {
                 yMove = speed;
-            }else if(refLink.GetKeyManager().left)
-            {
+            }else if(refLink.GetKeyManager().left) {
                 xMove = -speed;
-            }else if(refLink.GetKeyManager().right)
-            {
+            }else if(refLink.GetKeyManager().right) {
                 xMove = speed;
             }
         }
@@ -176,11 +178,10 @@ public class Hero extends Character
     @Override
     public void Draw(Graphics g)
     {
-        //g.drawImage(image, (int)x, (int)y, width, height, null);
-        g.drawImage(image, screenX, screenY, width, height, null);
+        g.drawImage(image, (int)x, (int)y, width, height, null);
 
             ///doar pentru debug daca se doreste vizualizarea dreptunghiului de coliziune altfel se vor comenta urmatoarele doua linii
-        g.setColor(Color.blue);
-        g.fillRect((int)(x + bounds.x), (int)(y + bounds.y), bounds.width, bounds.height);
+        //g.setColor(Color.blue);
+        //g.fillRect((int)(x + bounds.x), (int)(y + bounds.y), bounds.width, bounds.height);
     }
 }
