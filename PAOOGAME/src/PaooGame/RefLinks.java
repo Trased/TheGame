@@ -16,6 +16,10 @@ public class RefLinks
     private Map map;            /*!< Referinta catre harta curenta.*/
     public collisionChecker cCol = new collisionChecker(this);
 
+    public final int maxWorldCol = 60;
+    public final int maxWorldRow = 40;
+    public final int worldCol = 32 * maxWorldCol;
+    public final int worldRow = 32 * maxWorldRow;
     /*! \fn public RefLinks(Game game)
         \brief Constructorul de initializare al clasei.
 

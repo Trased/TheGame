@@ -17,8 +17,6 @@ import java.nio.file.Paths;
 public class Map
 {
     private RefLinks refLink;   /*!< O referinte catre un obiect "shortcut", obiect ce contine o serie de referinte utile in program.*/
-    private int width;          /*!< Latimea hartii in numar de dale.*/
-    private int height;         /*!< Inaltimea hartii in numar de dale.*/
     private int [][] tiles;     /*!< Referinta catre o matrice cu codurile dalelor ce vor construi harta.*/
     private int [][] objectTiles; /*!< Referinta catre o matrice ce contine obiectele ce se vor afisa pe harta. */
 
@@ -50,36 +48,26 @@ public class Map
      */
 
     public void Draw(Graphics g) {
-        int row = 0;
-        int col = 0;
         ///Se parcurge matricea de dale (codurile aferente) si se deseneaza harta respectiva
-        for (int y = 0; y < refLink.GetGame().GetHeight() / Tile.TILE_HEIGHT; y++) {
-            for (int x = 0; x < refLink.GetGame().GetWidth() / Tile.TILE_WIDTH; x++) {
+        for (int y = 0; y < refLink.worldCol / Tile.TILE_HEIGHT; y++) {
+            for (int x = 0; x < refLink.worldRow / Tile.TILE_WIDTH; x++) {
                 GetTile(x, y).Draw(g, (int) x * Tile.TILE_HEIGHT, (int) y * Tile.TILE_WIDTH);
             }
         }
     }
-/*
-    public void Draw(Graphics g, Hero character){
-        int charX = (int) character.GetX() - character.screenX / Tile.TILE_WIDTH;
-        int charY = (int) character.GetY() - character.screenY / Tile.TILE_HEIGHT;
-        int offsetX = charX * Tile. TILE_WIDTH;
-        int offsetY = charY * Tile.TILE_HEIGHT;
-
-        for(int y = 0; y < refLink.GetGame().GetHeight()/Tile.TILE_HEIGHT; y++)
-        {
-            for(int x = 0; x < refLink.GetGame().GetWidth()/Tile.TILE_WIDTH; x++)
-            {
-                int mapX = x + charX;
-                int mapY = y + charY;
-                if(mapX >= 0 && mapX < 960 && mapY >= 0 && mapY < 640) {
-                    GetTile(mapX, mapY).Draw(g, x * Tile.TILE_WIDTH - offsetX, y * Tile.TILE_HEIGHT - offsetY);
+    /*
+        public void Draw(Graphics g, Hero player){
+            for (int y = 0; y < refLink.worldCol / Tile.TILE_HEIGHT; y++) {
+                for (int x = 0; x < refLink.worldRow / Tile.TILE_WIDTH; x++) {
+                    int worldX = y * 32;
+                    int worldY = x * 32;
+                    int screenX = (int) (worldX - player.GetX() + player.screenX);
+                    int screenY = (int) (worldY - player.GetY() + player.screenY);
+                    GetTile(x,y).Draw(g, (int) x * Tile.TILE_HEIGHT, (int) y * Tile.TILE_WIDTH);
                 }
             }
         }
-
-    }*/
-
+    */
     /*! \fn public Tile GetTile(int x, int y)
         \brief Intoarce o referinta catre dala aferenta codului din matrice de dale.
 
@@ -88,7 +76,7 @@ public class Map
      */
     public Tile GetTile(int x, int y)
     {
-        if(x < 0 || y < 0 || x >= width || y >= height)
+        if(x < 0 || y < 0 || x >= refLink.maxWorldCol || y >= refLink.maxWorldRow)
         {
             return Tile.grassTile;
         }
@@ -108,24 +96,20 @@ public class Map
     {
         //atentie latimea si inaltimea trebuiesc corelate cu dimensiunile ferestrei sau
         //se poate implementa notiunea de camera/cadru de vizualizare al hartii
-            ///Se stabileste latimea hartii in numar de dale.
-        width = 60;
-            ///Se stabileste inaltimea hartii in numar de dale
-        height = 40;
             ///Se construieste matricea de coduri de dale
-        tiles = new int[width][height];
+        tiles = new int[refLink.maxWorldCol][refLink.maxWorldRow];
             //Se incarca matricea cu coduri
-        for(int y = 0; y < height; y++)
+        for(int y = 0; y < refLink.maxWorldRow; y++)
         {
-            for(int x = 0; x < width; x++)
+            for(int x = 0; x < refLink.maxWorldCol; x++)
             {
                 tiles[x][y] = HomeTownMap(x,y);
             }
         }
-        objectTiles = new int[width][height];
-        for(int y = 0; y < height; y++)
+        objectTiles = new int[refLink.maxWorldCol][refLink.maxWorldRow];
+        for(int y = 0; y < refLink.maxWorldRow; y++)
         {
-            for(int x = 0; x < width; x++)
+            for(int x = 0; x < refLink.maxWorldCol; x++)
             {
                 objectTiles[x][y] = HomeTownMapObjects(x,y);
             }
