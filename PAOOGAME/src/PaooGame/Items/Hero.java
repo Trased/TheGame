@@ -67,48 +67,60 @@ public class Hero extends Character
         Move();
             ///Actualizeaza imaginea
         if(refLink.GetKeyManager().up){
-            if(SPRITE_NUM == 1) {
-                image = Assets.heroUpOne;
-            }
-            if(SPRITE_NUM == 2) {
-                image = Assets.heroUpTwo;
-            }
-            if(SPRITE_NUM == 3) {
-                image = Assets.heroUpThree;
+            if(refLink.GetKeyManager().down){}
+            else {
+                if (SPRITE_NUM == 1) {
+                    image = Assets.heroUpOne;
+                }
+                if (SPRITE_NUM == 2) {
+                    image = Assets.heroUpTwo;
+                }
+                if (SPRITE_NUM == 3) {
+                    image = Assets.heroUpThree;
+                }
             }
         }
         if(refLink.GetKeyManager().down){
-            if(SPRITE_NUM == 1) {
-                image = Assets.heroDownOne;
-            }
-            if(SPRITE_NUM == 2) {
-                image = Assets.heroDownTwo;
-            }
-            if(SPRITE_NUM == 3) {
-                image = Assets.heroDownThree;
+            if(refLink.GetKeyManager().up){}
+            else {
+                if (SPRITE_NUM == 1) {
+                    image = Assets.heroDownOne;
+                }
+                if (SPRITE_NUM == 2) {
+                    image = Assets.heroDownTwo;
+                }
+                if (SPRITE_NUM == 3) {
+                    image = Assets.heroDownThree;
+                }
             }
         }
         if(refLink.GetKeyManager().left)
         {
-            if(SPRITE_NUM == 1){
-                image=Assets.heroLeftOne;
-            }
-            if(SPRITE_NUM == 2){
-                image = Assets.heroLeftTwo;
-            }
-            if(SPRITE_NUM == 3){
-                image = Assets.heroLeftThree;
+            if(refLink.GetKeyManager().right){}
+            else {
+                if (SPRITE_NUM == 1) {
+                    image = Assets.heroLeftOne;
+                }
+                if (SPRITE_NUM == 2) {
+                    image = Assets.heroLeftTwo;
+                }
+                if (SPRITE_NUM == 3) {
+                    image = Assets.heroLeftThree;
+                }
             }
         }
         if(refLink.GetKeyManager().right) {
-            if(SPRITE_NUM == 1) {
-                image = Assets.heroRightOne;
-            }
-            if(SPRITE_NUM == 2) {
-                image = Assets.heroRightTwo;
-            }
-            if(SPRITE_NUM == 3) {
-                image = Assets.heroRightThree;
+            if(refLink.GetKeyManager().left){}
+            else {
+                if (SPRITE_NUM == 1) {
+                    image = Assets.heroRightOne;
+                }
+                if (SPRITE_NUM == 2) {
+                    image = Assets.heroRightTwo;
+                }
+                if (SPRITE_NUM == 3) {
+                    image = Assets.heroRightThree;
+                }
             }
         }
     }
@@ -144,6 +156,7 @@ public class Hero extends Character
                 yMove = (float) (speed/sqrt(2.0));
                 xMove = (float) (speed/sqrt(2.0));
             }else if(refLink.GetKeyManager().up && refLink.GetKeyManager().down){}
+            else if (refLink.GetKeyManager().left && refLink.GetKeyManager().right){}
             else if(refLink.GetKeyManager().up) {
                 yMove  = -speed;
             }else if(refLink.GetKeyManager().down) {
