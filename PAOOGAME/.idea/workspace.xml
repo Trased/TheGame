@@ -6,12 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="9f63f0bd-07c3-4259-ad3b-2a5ee33c327f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/GameWindow/GameWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/GameWindow/GameWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Graphics/Assets.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Graphics/Assets.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Graphics/SpriteSheet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Graphics/SpriteSheet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Items/Hero.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Items/Hero.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Items/collisionChecker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Items/collisionChecker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PaooGame/GameWindow/GameWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/GameWindow/GameWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/States/PlayState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/States/PlayState.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Tiles/Tile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Tiles/Tile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaooGame/Graphics/Assets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Graphics/Assets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaooGame/Graphics/SpriteSheet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Graphics/SpriteSheet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PaooGame/Items/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Items/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PaooGame/Items/collisionChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Items/collisionChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PaooGame/States/PlayState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/States/PlayState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaooGame/Tiles/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Tiles/Tile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +190,8 @@
       <workItem from="1681997694800" duration="33000" />
       <workItem from="1681998013992" duration="3868000" />
       <workItem from="1682017739549" duration="300000" />
-      <workItem from="1682018313055" duration="2880000" />
+      <workItem from="1682018313055" duration="3136000" />
+      <workItem from="1682022057376" duration="2796000" />
     </task>
     <servers />
   </component>

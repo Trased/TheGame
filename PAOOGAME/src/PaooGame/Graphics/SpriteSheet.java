@@ -13,6 +13,8 @@ public class SpriteSheet
     private BufferedImage       spriteSheet;        /*!< Referinta catre obiectul BufferedImage ce contine sprite sheet-ul.*/
     private static final int    tileWidth   = 32;   /*!< Latimea unei dale din sprite sheet.*/
     private static final int    tileHeight  = 32;   /*!< Inaltime unei dale din sprite sheet.*/
+    private static final int    characterTileWidth = 64;
+    private static final int    characterTileHeight = 64;
 
     /*! \fn public SpriteSheet(BufferedImage sheet)
         \brief Constructor, initializeaza spriteSheet.
@@ -39,5 +41,12 @@ public class SpriteSheet
             /// al imaginii si apoi latimea si inaltimea (totul in pixeli). Coltul din stanga sus al imaginii
             /// se obtine inmultind numarul de ordine al dalei cu dimensiunea in pixeli a unei dale.
         return spriteSheet.getSubimage(x * tileWidth, y * tileHeight, tileWidth, tileHeight);
+    }
+    public BufferedImage characterCrop(int x, int y)
+    {
+        /// Subimaginea (dala) este regasita in sprite sheet specificad coltul stanga sus
+        /// al imaginii si apoi latimea si inaltimea (totul in pixeli). Coltul din stanga sus al imaginii
+        /// se obtine inmultind numarul de ordine al dalei cu dimensiunea in pixeli a unei dale.
+        return spriteSheet.getSubimage(x * characterTileWidth, y * characterTileHeight, characterTileWidth, characterTileHeight);
     }
 }

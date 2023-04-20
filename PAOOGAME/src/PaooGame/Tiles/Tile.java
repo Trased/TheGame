@@ -20,7 +20,6 @@ public class Tile
     public static Tile topGrass         = new topGrassTile(4);
     public static Tile bottomGrass      = new bottomGrassTile(5);
 
-//    public static Tile FirstHomeTileOne = new FirstHomeTileOne(5);
     public static final int TILE_WIDTH  = 32;                       /*!< Latimea unei dale.*/
     public static final int TILE_HEIGHT = 32;                       /*!< Inaltimea unei dale.*/
 
