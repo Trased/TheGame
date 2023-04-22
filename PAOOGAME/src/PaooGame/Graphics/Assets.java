@@ -43,18 +43,18 @@ public class Assets
         SpriteSheet character = new SpriteSheet(ImageLoader.LoadImage("/textures/CharacterSpriteSheet.png"));
 
             /// Se obtin subimaginile corespunzatoare elementelor necesare.
-        heroDownOne = character.crop(0,0);
-        heroDownTwo = character.crop(1,0);
-        heroDownThree = character.crop(2,0);
-        heroLeftOne = character.crop(0,1);
-        heroLeftTwo = character.crop(1,1);
-        heroLeftThree = character.crop(2,1);
-        heroRightOne = character.crop(0,2);
-        heroRightTwo = character.crop(1,2);
-        heroRightThree = character.crop(2,2);
-        heroUpOne = character.crop(0,3);
-        heroUpTwo = character.crop(1,3);
-        heroUpThree = character.crop(2,3);
+        heroDownOne = character.characterCrop(0,0);
+        heroDownTwo = character.characterCrop(1,0);
+        heroDownThree = character.characterCrop(2,0);
+        heroLeftOne = character.characterCrop(0,1);
+        heroLeftTwo = character.characterCrop(1,1);
+        heroLeftThree = character.characterCrop(2,1);
+        heroRightOne = character.characterCrop(0,2);
+        heroRightTwo = character.characterCrop(1,2);
+        heroRightThree = character.characterCrop(2,2);
+        heroUpOne = character.characterCrop(0,3);
+        heroUpTwo = character.characterCrop(1,3);
+        heroUpThree = character.characterCrop(2,3);
 
 
         stone = sheet.crop(9,5);

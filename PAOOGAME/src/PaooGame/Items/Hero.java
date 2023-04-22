@@ -39,10 +39,10 @@ public class Hero extends Character
             ///Seteaza imaginea de start a eroului
         image = Assets.heroLeftOne;
             ///Stabilieste pozitia relativa si dimensiunea dreptunghiului de coliziune, starea implicita(normala)
-        normalBounds.x = 16;
-        normalBounds.y = 16;
+        normalBounds.x = 35;
+        normalBounds.y = 35;
         normalBounds.width = 24;
-        normalBounds.height = 32;
+        normalBounds.height = 40;
 
             ///Stabilieste pozitia relativa si dimensiunea dreptunghiului de coliziune, starea de atac
         attackBounds.x = 10;
@@ -194,7 +194,7 @@ public class Hero extends Character
         g.drawImage(image, (int)x, (int)y, width, height, null);
 
             ///doar pentru debug daca se doreste vizualizarea dreptunghiului de coliziune altfel se vor comenta urmatoarele doua linii
-        g.setColor(Color.blue);
-        g.fillRect((int)(x + bounds.x), (int)(y + bounds.y), bounds.width, bounds.height);
+        //g.setColor(Color.blue);
+        //g.fillRect((int)(x + bounds.x), (int)(y + bounds.y), bounds.width, bounds.height);
     }
 }
