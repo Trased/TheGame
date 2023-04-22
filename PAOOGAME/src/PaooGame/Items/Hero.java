@@ -5,7 +5,6 @@ import java.awt.image.BufferedImage;
 
 import PaooGame.RefLinks;
 import PaooGame.Graphics.Assets;
-
 import static java.lang.Math.sqrt;
 
 /*! \class public class Hero extends Character
@@ -66,6 +65,7 @@ public class Hero extends Character
             ///Actualizeaza pozitia
         Move();
             ///Actualizeaza imaginea
+
         if(refLink.GetKeyManager().up){
             if(refLink.GetKeyManager().down){}
             else {
@@ -194,7 +194,7 @@ public class Hero extends Character
         g.drawImage(image, (int)x, (int)y, width, height, null);
 
             ///doar pentru debug daca se doreste vizualizarea dreptunghiului de coliziune altfel se vor comenta urmatoarele doua linii
-        //g.setColor(Color.blue);
-        //g.fillRect((int)(x + bounds.x), (int)(y + bounds.y), bounds.width, bounds.height);
+        g.setColor(Color.blue);
+        g.fillRect((int)(x + bounds.x), (int)(y + bounds.y), bounds.width, bounds.height);
     }
 }
