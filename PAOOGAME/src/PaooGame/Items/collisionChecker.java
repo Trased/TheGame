@@ -11,23 +11,14 @@ public class collisionChecker {
         ref = reflink;
     }
     public void checkTile(Character entity) {
-        int entityLeftOne = (int) (entity.GetX() + entity.normalBounds.x);
-        int entityLeftTwo = entityLeftOne + 5;
-        int entityRightOne = (int) (entity.GetX() + entity.normalBounds.x + entity.normalBounds.width);
-        int entityRightTwo = entityRightOne - 5;
-        int entityUpOne = (int) (entity.GetY() + entity.normalBounds.y);
-        int entityUpTwo = entityUpOne - 5;
-        int entityDownOne = (int) (entity.GetY() + entity.normalBounds.y + entity.normalBounds.height);
-        int entityDownTwo = entityDownOne +5;
-
         int entityXLeftBorder = (int) (entity.GetX() + entity.normalBounds.x);
         int entityXNearLeftBorder = (int) (entity.GetX() + entity.normalBounds.x)+10;
-        int entityXRightBorder = (int) (entity.GetX() + entity.normalBounds.x + entity.normalBounds.width);
-        int entityXNearRightBorder = (int) (entity.GetX() + entity.normalBounds.x + entity.normalBounds.width) - 10;
+        int entityXRightBorder = (int) (entity.GetX() + entity.normalBounds.x + entity.normalBounds.width)+10;
+        int entityXNearRightBorder = (int) (entity.GetX() + entity.normalBounds.x + entity.normalBounds.width);
         int entityYTopBorder = (int) (entity.GetY() + entity.normalBounds.y);
         int entityYNearTopBorder = (int) (entity.GetY() + entity.normalBounds.y) + 10;
-        int entityYBottomBorder = (int) (entity.GetY() + entity.normalBounds.y + entity.normalBounds.height);
-        int entityYNearBottomBorder = (int) (entity.GetY() + entity.normalBounds.y + entity.normalBounds.height) - 10;
+        int entityYBottomBorder = (int) (entity.GetY() + entity.normalBounds.y + entity.normalBounds.height)+5;
+        int entityYNearBottomBorder = (int) (entity.GetY() + entity.normalBounds.y + entity.normalBounds.height);
 
 
         int entityColXLeftBorder = (int) ((entityXLeftBorder - entity.speed) / 32);
