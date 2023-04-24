@@ -11,6 +11,7 @@ public class collisionChecker {
         ref = reflink;
     }
     public void checkTile(Character entity) {
+<<<<<<< Updated upstream
         int entityLeftOne = (int) (entity.GetX() + entity.normalBounds.x);
         int entityLeftTwo = entityLeftOne + 5;
         int entityRightOne = (int) (entity.GetX() + entity.normalBounds.x + entity.normalBounds.width);
@@ -19,6 +20,28 @@ public class collisionChecker {
         int entityUpTwo = entityUpOne - 5;
         int entityDownOne = (int) (entity.GetY() + entity.normalBounds.y + entity.normalBounds.height);
         int entityDownTwo = entityDownOne +5;
+=======
+        int entityXLeftBorder = (int) (entity.GetX() + entity.normalBounds.x);
+        int entityXNearLeftBorder = (int) (entity.GetX() + entity.normalBounds.x)+10;
+        int entityXRightBorder = (int) (entity.GetX() + entity.normalBounds.x + entity.normalBounds.width);
+        int entityXNearRightBorder = (int) (entity.GetX() + entity.normalBounds.x + entity.normalBounds.width) - 10;
+        int entityYTopBorder = (int) (entity.GetY() + entity.normalBounds.y);
+        int entityYNearTopBorder = (int) (entity.GetY() + entity.normalBounds.y) + 10;
+        int entityYBottomBorder = (int) (entity.GetY() + entity.normalBounds.y + entity.normalBounds.height);
+        int entityYNearBottomBorder = (int) (entity.GetY() + entity.normalBounds.y + entity.normalBounds.height) - 10;
+
+
+        int entityColXLeftBorder = (int) ((entityXLeftBorder - entity.speed) / 32);
+        int entityColXNearLeftBorder = (int) ((entityXNearLeftBorder - entity.speed) / 32);
+        int entityColXRightBorder = (int) ((entityXRightBorder - entity.speed) / 32);
+        int entityColXNearRightBorder = (int) ((entityXNearRightBorder - entity.speed) / 32);
+        int entityColYTopBorder = (int) ((entityYTopBorder - entity.speed) / 32);
+        int entityColYNearTopBorder = (int) ((entityYNearTopBorder - entity.speed) / 32);
+        int entityColYBottomBorder = (int) ((entityYBottomBorder - entity.speed) / 32);
+        int entityColYNearBottomBorder = (int) ((entityYNearBottomBorder - entity.speed) / 32);
+
+
+>>>>>>> Stashed changes
 
         int entityLeftColOne = (int) ((entityLeft - entity.speed) / 32);
         int entityLeftColTwo;
@@ -31,22 +54,50 @@ public class collisionChecker {
 
 
         if (ref.GetKeyManager().up) {
+<<<<<<< Updated upstream
             if (ref.GetMap().GetTile(entityLeftCol, entityUpCol).IsSolid() && ref.GetMap().GetTile(entityRightCol, entityUpCol).IsSolid()) {
+=======
+            if (ref.GetMap().GetTile(entityColXLeftBorder, entityColYTopBorder).IsSolid() &&
+                ref.GetMap().GetTile(entityColXNearLeftBorder, entityColYTopBorder).IsSolid() ||
+                ref.GetMap().GetTile(entityColXNearRightBorder, entityColYTopBorder).IsSolid() &&
+                ref.GetMap().GetTile(entityColXRightBorder, entityColYTopBorder).IsSolid()) {
+>>>>>>> Stashed changes
                 entity.collisionOn = true;
             }
         }
         if (ref.GetKeyManager().down) {
+<<<<<<< Updated upstream
             if (ref.GetMap().GetTile(entityLeftCol, entityDownCol).IsSolid() && ref.GetMap().GetTile(entityRightCol, entityDownCol).IsSolid()) {
+=======
+            if (ref.GetMap().GetTile(entityColXLeftBorder, entityColYBottomBorder).IsSolid() &&
+                ref.GetMap().GetTile(entityColXNearLeftBorder, entityColYBottomBorder).IsSolid() ||
+                ref.GetMap().GetTile(entityColXNearRightBorder, entityColYBottomBorder).IsSolid() &&
+                ref.GetMap().GetTile(entityColXRightBorder, entityColYBottomBorder).IsSolid()) {
+>>>>>>> Stashed changes
                 entity.collisionOn = true;
             }
         }
         if (ref.GetKeyManager().right) {
+<<<<<<< Updated upstream
             if (ref.GetMap().GetTile(entityRightCol, entityUpCol).IsSolid() && ref.GetMap().GetTile(entityRightCol, entityDownCol).IsSolid()) {
+=======
+            if (ref.GetMap().GetTile(entityColXRightBorder, entityColYTopBorder).IsSolid() &&
+                ref.GetMap().GetTile(entityColXRightBorder, entityColYNearTopBorder).IsSolid() ||
+                ref.GetMap().GetTile(entityColXRightBorder, entityColYNearBottomBorder).IsSolid() &&
+                ref.GetMap().GetTile(entityColXRightBorder, entityColYBottomBorder).IsSolid()) {
+>>>>>>> Stashed changes
                 entity.collisionOn = true;
             }
         }
         if (ref.GetKeyManager().left) {
+<<<<<<< Updated upstream
             if (ref.GetMap().GetTile(entityLeftCol, entityUpCol).IsSolid() && ref.GetMap().GetTile(entityLeftCol, entityDownCol).IsSolid()) {
+=======
+            if (ref.GetMap().GetTile(entityColXLeftBorder, entityColYTopBorder).IsSolid() &&
+                ref.GetMap().GetTile(entityColXLeftBorder, entityColYNearTopBorder).IsSolid() ||
+                ref.GetMap().GetTile(entityColXLeftBorder, entityColYNearBottomBorder).IsSolid() &&
+                ref.GetMap().GetTile(entityColXLeftBorder, entityColYBottomBorder).IsSolid()) {
+>>>>>>> Stashed changes
                 entity.collisionOn = true;
             }
         }
