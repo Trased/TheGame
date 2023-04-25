@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f63f0bd-07c3-4259-ad3b-2a5ee33c327f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/textures/HomeMadeTileSet.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/textures/HomeMadeTileSet.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaooGame/Graphics/Assets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Graphics/Assets.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PaooGame/Items/collisionChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Items/collisionChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaooGame/Tiles/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Tiles/Tile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,11 +41,17 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/PaooGame/Game.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/PaooGame/GameWindow/GameWindow.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/PaooGame/Graphics/Assets.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/PaooGame/Items/Hero.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/PaooGame/Items/collisionChecker.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/PaooGame/Maps/Map.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/PaooGame/RefLinks.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/PaooGame/States/PlayState.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/PaooGame/Tiles/BigGreenTreeTile.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/PaooGame/Tiles/Fence.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/PaooGame/Tiles/FifthModelHouseTile.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/PaooGame/Tiles/FirstModelHouseTile.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/PaooGame/Tiles/FourthModelHouseTile.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/PaooGame/Tiles/Tile.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
@@ -90,6 +100,9 @@
     <option name="height" value="1036" />
   </component>
   <component name="ProjectId" id="2O1QVwUYht5nTan5NigVttEoXUU" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -183,6 +196,8 @@
       <workItem from="1682022057376" duration="3426000" />
       <workItem from="1682169137509" duration="83000" />
       <workItem from="1682170077411" duration="4720000" />
+      <workItem from="1682364831523" duration="2622000" />
+      <workItem from="1682447726435" duration="6512000" />
     </task>
     <servers />
   </component>
