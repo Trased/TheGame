@@ -8,17 +8,17 @@ import java.awt.image.BufferedImage;
  */
 public class Tile
 {
-    private static final int NO_TILES   = 76;
+    private static final int NO_TILES   = 81;
     public static Tile[] tiles          = new Tile[NO_TILES];       /*!< Vector de referinte de tipuri de dale.*/
 
         /// De remarcat ca urmatoarele dale sunt statice si publice. Acest lucru imi permite sa le am incarcate
         /// o singura data in memorie
     public static Tile stoneTile        =   new StoneTile(0);
     public static Tile grassTile        =   new GrassTile(1);
-    public static Tile townGrass        =   new townGrassTile(2);
+    public static Tile townGrass        =   new TownGrassTile(2);
     public static Tile sandtile         =   new SandTile(3);
-    public static Tile topGrass         =   new topGrassTile(4);
-    public static Tile bottomGrass      =   new bottomGrassTile(5);
+    public static Tile topGrass         =   new TopGrassTile(4);
+    public static Tile bottomGrass      =   new BottomGrassTile(5);
 
     public static Tile GreenTreeOne     =   new GreenTreeTile.GreenTreeTileOne(6);
     public static Tile GreenTreeTwo     =   new GreenTreeTile.GreenTreeTileTwo(7);
@@ -79,19 +79,36 @@ public class Tile
     public static Tile FifthModelHouseFive=  new FifthModelHouseTile.FifthModelHouseTileFive(62);
     public static Tile FifthModelHouseSix=  new FifthModelHouseTile.FifthModelHouseTileSix(63);
 
-    public static Tile FenceTopLeftCorner = new Fence.FenceTopLeftCornerTile(64);
-    public static Tile FenceLeftDownRight = new Fence.FenceLeftDownRightTile(65);
-    public static Tile FenceTopRightCorner= new Fence.FenceTopRightCornerTile(66);
-    public static Tile FenceLeftRight= new Fence.FenceLeftRightTile(67);
-    public static Tile FenceBottomRightTop= new Fence.FenceBottomRightTopTile(68);
-    public static Tile FenceMid= new Fence.FenceMidTile(69);
-    public static Tile FenceBottomLeftTop= new Fence.FenceBottomLeftTopTile(70);
-    public static Tile FenceBottomTop= new Fence.FenceBottomTopTile(71);
-    public static Tile FenceBottomLeftCorner= new Fence.FenceBottomLeftCornerTile(72);
-    public static Tile FenceLeftUpRight= new Fence.FenceLeftUpRightTile(73);
-    public static Tile FenceBottomRightCorner= new Fence.FenceBottomRightCornerTile(74);
-    public static Tile FenceBlock= new Fence.FenceBlockTile(75);
+    public static Tile FenceTopLeftCorner = new FenceTile.FenceTopLeftCornerTile(64);
+    public static Tile FenceLeftDownRight = new FenceTile.FenceLeftDownRightTile(65);
+    public static Tile FenceTopRightCorner= new FenceTile.FenceTopRightCornerTile(66);
+    public static Tile FenceLeftRight= new FenceTile.FenceLeftRightTile(67);
+    public static Tile FenceBottomRightTop= new FenceTile.FenceBottomRightTopTile(68);
+    public static Tile FenceMid= new FenceTile.FenceMidTile(69);
+    public static Tile FenceBottomLeftTop= new FenceTile.FenceBottomLeftTopTile(70);
+    public static Tile FenceBottomTop= new FenceTile.FenceBottomTopTile(71);
+    public static Tile FenceBottomLeftCorner= new FenceTile.FenceBottomLeftCornerTile(72);
+    public static Tile FenceLeftUpRight= new FenceTile.FenceLeftUpRightTile(73);
+    public static Tile FenceBottomRightCorner= new FenceTile.FenceBottomRightCornerTile(74);
+    public static Tile FenceBlock= new FenceTile.FenceBlockTile(75);
     public static Tile Invisible = new InvisibleTile(76);
+    public static Tile TradingPostTileOne = new TradingPostTile.TradingPostTileOne(77);
+    public static Tile TradingPostTileTwo = new TradingPostTile.TradingPostTileTwo(78);
+    public static Tile TradingPostTileThree = new TradingPostTile.TradingPostTileThree(79);
+    public static Tile TradingPostTileFour = new TradingPostTile.TradingPostTileFour(80);
+    public static Tile PetrifiedSandTile = new PetrifiedSandTile.PetrifiedSand(81);
+    public static Tile HeartTile = new ObjectTiles.HeartTile(82);
+    public static Tile CoinTile = new ObjectTiles.CoinTile(83);
+    public static Tile ChestOneOpen = new ObjectTiles.ChestOneOpen(84);
+    public static Tile ChestOneClose = new ObjectTiles.ChestOneClosed(85);
+    public static Tile ChestTwoOpen = new ObjectTiles.ChestTwoOpen(86);
+    public static Tile ChestTwoClose = new ObjectTiles.ChestTwoClose(87);
+    public static Tile BushOne = new BushTile.BushOne(88);
+    public static Tile BushTwo = new BushTile.BushTwo(89);
+    public static Tile BushThree = new BushTile.BushThree(90);
+    public static Tile CutTree = new BushTile.CutTree(91);
+    public static Tile Mud = new MudTile(92);
+
 
 
     public static final int TILE_WIDTH  = 32;                       /*!< Latimea unei dale.*/

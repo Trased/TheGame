@@ -5,80 +5,44 @@ import PaooGame.Graphics.Assets;
 public class SecondModelHouseTile {
     public static class SecondModelHouseTileOne extends Tile
     {
-        /*! \fn public GrassTile(int id)
-            \brief Constructorul de initializare al clasei
-
-            \param id Id-ul dalei util in desenarea hartii.
-         */
         public SecondModelHouseTileOne(int id)
         {
-            /// Apel al constructorului clasei de baza
-            super(Assets.SecondModelHouseOne, id);
+            super(Assets.secondModelHouseOne, id);
         }
     }
     public static class SecondModelHouseTileTwo extends Tile
     {
-        /*! \fn public GrassTile(int id)
-            \brief Constructorul de initializare al clasei
-
-            \param id Id-ul dalei util in desenarea hartii.
-         */
         public SecondModelHouseTileTwo(int id)
         {
-            /// Apel al constructorului clasei de baza
-            super(Assets.SecondModelHouseTwo, id);
+            super(Assets.secondModelHouseTwo, id);
         }
     }
     public static class SecondModelHouseTileThree extends Tile
     {
-        /*! \fn public GrassTile(int id)
-            \brief Constructorul de initializare al clasei
-
-            \param id Id-ul dalei util in desenarea hartii.
-         */
         public SecondModelHouseTileThree(int id)
         {
-            /// Apel al constructorului clasei de baza
-            super(Assets.SecondModelHouseThree, id);
+            super(Assets.secondModelHouseThree, id);
         }
     }
     public static class SecondModelHouseTileFour extends Tile
     {
-        /*! \fn public GrassTile(int id)
-            \brief Constructorul de initializare al clasei
-
-            \param id Id-ul dalei util in desenarea hartii.
-         */
         public SecondModelHouseTileFour(int id)
         {
-            /// Apel al constructorului clasei de baza
-            super(Assets.SecondModelHouseFour, id);
+            super(Assets.secondModelHouseFour, id);
         }
     }
     public static class SecondModelHouseTileFive extends Tile
     {
-        /*! \fn public GrassTile(int id)
-            \brief Constructorul de initializare al clasei
-
-            \param id Id-ul dalei util in desenarea hartii.
-         */
         public SecondModelHouseTileFive(int id)
         {
-            /// Apel al constructorului clasei de baza
-            super(Assets.SecondModelHouseFive, id);
+            super(Assets.secondModelHouseFive, id);
         }
     }
     public static class SecondModelHouseTileSix extends Tile
     {
-        /*! \fn public GrassTile(int id)
-            \brief Constructorul de initializare al clasei
-
-            \param id Id-ul dalei util in desenarea hartii.
-         */
         public SecondModelHouseTileSix(int id)
         {
-            /// Apel al constructorului clasei de baza
-            super(Assets.SecondModelHouseSix, id);
+            super(Assets.secondModelHouseSix, id);
         }
     }
 }

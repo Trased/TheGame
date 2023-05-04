@@ -5,119 +5,65 @@ import PaooGame.Graphics.Assets;
 public class ThirdModelHouseTile {
     public static class ThirdModelHouseTileOne extends Tile
     {
-        /*! \fn public GrassTile(int id)
-            \brief Constructorul de initializare al clasei
-
-            \param id Id-ul dalei util in desenarea hartii.
-         */
         public ThirdModelHouseTileOne(int id)
         {
-            /// Apel al constructorului clasei de baza
-            super(Assets.ThirdModelHouseOne, id);
+            super(Assets.thirdModelHouseOne, id);
         }
     }
     public static class ThirdModelHouseTileTwo extends Tile
     {
-        /*! \fn public GrassTile(int id)
-            \brief Constructorul de initializare al clasei
-
-            \param id Id-ul dalei util in desenarea hartii.
-         */
         public ThirdModelHouseTileTwo(int id)
         {
-            /// Apel al constructorului clasei de baza
-            super(Assets.ThirdModelHouseTwo, id);
+            super(Assets.thirdModelHouseTwo, id);
         }
     }
     public static class ThirdModelHouseTileThree extends Tile
     {
-        /*! \fn public GrassTile(int id)
-            \brief Constructorul de initializare al clasei
-
-            \param id Id-ul dalei util in desenarea hartii.
-         */
         public ThirdModelHouseTileThree(int id)
         {
-            /// Apel al constructorului clasei de baza
-            super(Assets.ThirdModelHouseThree, id);
+            super(Assets.thirdModelHouseThree, id);
         }
     }
     public static class ThirdModelHouseTileFour extends Tile
     {
-        /*! \fn public GrassTile(int id)
-            \brief Constructorul de initializare al clasei
-
-            \param id Id-ul dalei util in desenarea hartii.
-         */
         public ThirdModelHouseTileFour(int id)
         {
-            /// Apel al constructorului clasei de baza
-            super(Assets.ThirdModelHouseFour, id);
+            super(Assets.thirdModelHouseFour, id);
         }
     }
     public static class ThirdModelHouseTileFive extends Tile
     {
-        /*! \fn public GrassTile(int id)
-            \brief Constructorul de initializare al clasei
-
-            \param id Id-ul dalei util in desenarea hartii.
-         */
         public ThirdModelHouseTileFive(int id)
         {
-            /// Apel al constructorului clasei de baza
-            super(Assets.ThirdModelHouseFive, id);
+            super(Assets.thirdModelHouseFive, id);
         }
     }
     public static class ThirdModelHouseTileSix extends Tile
     {
-        /*! \fn public GrassTile(int id)
-            \brief Constructorul de initializare al clasei
-
-            \param id Id-ul dalei util in desenarea hartii.
-         */
         public ThirdModelHouseTileSix(int id)
         {
-            /// Apel al constructorului clasei de baza
-            super(Assets.ThirdModelHouseSix, id);
+            super(Assets.thirdModelHouseSix, id);
         }
     }
     public static class ThirdModelHouseTileSeven extends Tile
     {
-        /*! \fn public GrassTile(int id)
-            \brief Constructorul de initializare al clasei
-
-            \param id Id-ul dalei util in desenarea hartii.
-         */
         public ThirdModelHouseTileSeven(int id)
         {
-            /// Apel al constructorului clasei de baza
-            super(Assets.ThirdModelHouseSeven, id);
+            super(Assets.thirdModelHouseSeven, id);
         }
     }
     public static class ThirdModelHouseTileEight extends Tile
     {
-        /*! \fn public GrassTile(int id)
-            \brief Constructorul de initializare al clasei
-
-            \param id Id-ul dalei util in desenarea hartii.
-         */
         public ThirdModelHouseTileEight(int id)
         {
-            /// Apel al constructorului clasei de baza
-            super(Assets.ThirdModelHouseEight, id);
+            super(Assets.thirdModelHouseEight, id);
         }
     }
     public static class ThirdModelHouseTileNine extends Tile
     {
-        /*! \fn public GrassTile(int id)
-            \brief Constructorul de initializare al clasei
-
-            \param id Id-ul dalei util in desenarea hartii.
-         */
         public ThirdModelHouseTileNine(int id)
         {
-            /// Apel al constructorului clasei de baza
-            super(Assets.ThirdModelHouseNine, id);
+            super(Assets.thirdModelHouseNine, id);
         }
     }
 }
