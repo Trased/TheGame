@@ -99,10 +99,10 @@ public class Tile
     public static Tile PetrifiedSandTile = new PetrifiedSandTile.PetrifiedSand(69);
     public static Tile HeartTile = new ObjectTiles.HeartTile(57);
     public static Tile CoinTile = new ObjectTiles.CoinTile(58);
-    public static Tile ChestOneOpen = new ObjectTiles.ChestOneOpen(67);
-    public static Tile ChestOneClose = new ObjectTiles.ChestOneClosed(68);
-    public static Tile ChestTwoOpen = new ObjectTiles.ChestTwoOpen(77);
-    public static Tile ChestTwoClose = new ObjectTiles.ChestTwoClose(78);
+    public static Tile ChestOneOpen = new ObjectTiles.ChestOneOpen(68);
+    public static Tile ChestOneClose = new ObjectTiles.ChestOneClosed(67);
+    public static Tile ChestTwoOpen = new ObjectTiles.ChestTwoOpen(78);
+    public static Tile ChestTwoClose = new ObjectTiles.ChestTwoClose(77);
     public static Tile BushOne = new BushTile.BushOne(4);
     public static Tile BushTwo = new BushTile.BushTwo(5);
     public static Tile BushThree = new BushTile.BushThree(15);

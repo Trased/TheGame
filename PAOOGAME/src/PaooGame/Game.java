@@ -3,7 +3,6 @@ package PaooGame;
 import PaooGame.GameWindow.GameWindow;
 import PaooGame.Graphics.Assets;
 import PaooGame.Input.KeyManager;
-import PaooGame.Items.collisionChecker;
 import PaooGame.States.*;
 import PaooGame.Tiles.Tile;
 

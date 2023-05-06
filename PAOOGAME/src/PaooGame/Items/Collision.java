@@ -1,13 +1,10 @@
 package PaooGame.Items;
 
-import PaooGame.Maps.Map;
 import PaooGame.RefLinks;
 
-import static java.lang.Math.sqrt;
-
-public class collisionChecker {
+public class Collision {
     RefLinks ref;
-    public collisionChecker(RefLinks reflink){
+    public Collision(RefLinks reflink){
         ref = reflink;
     }
     public void checkTile(Character entity) {

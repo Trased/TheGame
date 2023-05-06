@@ -22,6 +22,7 @@ public class ObjectTiles {
         public ChestOneClosed(int id)
         {
             super(Assets.chestOneClose, id);
+            this.collision = true;
         }
     }
     public static class ChestOneOpen extends Tile
@@ -29,6 +30,7 @@ public class ObjectTiles {
         public ChestOneOpen(int id)
         {
             super(Assets.chestOneOpen, id);
+            this.collision = true;
         }
     }
     public static class ChestTwoClose extends Tile
@@ -36,6 +38,7 @@ public class ObjectTiles {
         public ChestTwoClose(int id)
         {
             super(Assets.chestTwoClose, id);
+            this.collision = true;
         }
     }
     public static class ChestTwoOpen extends Tile
@@ -43,6 +46,7 @@ public class ObjectTiles {
         public ChestTwoOpen(int id)
         {
             super(Assets.chestTwoOpen, id);
+            this.collision = true;
         }
     }
 }

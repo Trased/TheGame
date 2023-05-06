@@ -1,6 +1,6 @@
 package PaooGame;
 
-import PaooGame.Items.collisionChecker;
+import PaooGame.Items.Collision;
 import PaooGame.Maps.Map;
 
 import PaooGame.Input.KeyManager;
@@ -14,7 +14,7 @@ public class RefLinks
 {
     private Game game;          /*!< Referinta catre obiectul Game.*/
     private Map map;            /*!< Referinta catre harta curenta.*/
-    public collisionChecker cCol = new collisionChecker(this);
+    public Collision cCol = new Collision(this);
 
     public final int maxWorldCol = 60;
     public final int maxWorldRow = 40;

@@ -29,6 +29,7 @@ public class BushTile {
         public CutTree(int id)
         {
             super(Assets.cutTree, id);
+            this.collision = true;
         }
     }
 }

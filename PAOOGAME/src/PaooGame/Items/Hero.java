@@ -2,7 +2,10 @@ package PaooGame.Items;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.util.ArrayList;
 
+import PaooGame.Observer.LocationSubject;
+import PaooGame.Observer.PlayerLocationObserver;
 import PaooGame.RefLinks;
 import PaooGame.Graphics.Assets;
 import static java.lang.Math.sqrt;
@@ -16,13 +19,14 @@ import static java.lang.Math.sqrt;
         atacul (nu este implementat momentan)
         dreptunghiul de coliziune
  */
-public class Hero extends Character
+public class Hero extends Character implements LocationSubject
 {
     private BufferedImage image;    /*!< Referinta catre imaginea curenta a eroului.*/
 
     ///Fixam caracterul pe mijlocul ecranului
     public final int screenX;
     public final int screenY;
+    private ArrayList<PlayerLocationObserver> observers;
 
     /*! \fn public Hero(RefLinks refLink, float x, float y)
         \brief Constructorul de initializare al clasei Hero.
@@ -35,6 +39,7 @@ public class Hero extends Character
     {
             ///Apel al constructorului clasei de baza
         super(refLink, x,y, Character.DEFAULT_CREATURE_WIDTH, Character.DEFAULT_CREATURE_HEIGHT);
+        observers = new ArrayList<PlayerLocationObserver>();
             ///Seteaza imaginea de start a eroului
         image = Assets.heroLeftOne;
             ///Stabilieste pozitia relativa si dimensiunea dreptunghiului de coliziune, starea implicita(normala)
@@ -52,6 +57,27 @@ public class Hero extends Character
         screenX = refLink.GetWidth() / 2;
         screenY = refLink.GetHeight() / 2;
 
+    }
+    @Override
+    public void registerObserver(PlayerLocationObserver observer) {
+        observers.add(observer);
+    }
+    @Override
+    public void removeObserver(PlayerLocationObserver observer) {
+        int i = observers.indexOf(observer);
+        if (i >= 0) {
+            observers.remove(i);
+        }
+    }
+    public void playerMoved() {
+        notifyObservers();
+    }
+
+    public void notifyObservers() {
+        for (int i = 0; i < observers.size(); i++) {
+            PlayerLocationObserver observer = (PlayerLocationObserver) observers.get(i);
+            observer.update();
+        }
     }
 
     /*! \fn public void Update()
