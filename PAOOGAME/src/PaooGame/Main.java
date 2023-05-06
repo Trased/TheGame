@@ -6,5 +6,6 @@ public class Main
     {
         Game paooGame = new Game("Fiury's Adventures", 960, 640);
         paooGame.StartGame();
+
     }
 }

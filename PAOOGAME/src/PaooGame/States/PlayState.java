@@ -33,8 +33,11 @@ public class PlayState extends State implements PlayerLocationObserver
         hero = new Hero(refLink,30* Tile.TILE_HEIGHT, 20*Tile.TILE_WIDTH); // x, y sunt coordonatele unde se spawneaza :: TO DO in viitor: SQL care retine unde e personajul la log-out!!
         hero.registerObserver(this);
     }
-    public void update() {
-
+    public void ObserverUpdate() {
+        int check = playerIsInCertainLocation();
+        if (check != 0 ) {
+            swapLevel(check);
+        }
     }
 
     private int playerIsInCertainLocation() {
@@ -92,11 +95,6 @@ public class PlayState extends State implements PlayerLocationObserver
     {
         map.Update();
         hero.Update();
-        int check = playerIsInCertainLocation();
-        if (check != 0 ) {
-            swapLevel(check);
-        }
-        System.out.println(map.getMapID() + " " + hero.GetX() + " " + hero.GetY());
     }
 
     /*! \fn public void Draw(Graphics g)

@@ -76,7 +76,7 @@ public class Hero extends Character implements LocationSubject
     public void notifyObservers() {
         for (int i = 0; i < observers.size(); i++) {
             PlayerLocationObserver observer = (PlayerLocationObserver) observers.get(i);
-            observer.update();
+            observer.ObserverUpdate();
         }
     }
 
@@ -165,32 +165,40 @@ public class Hero extends Character implements LocationSubject
         refLink.cCol.checkTile(this);
         if(!collisionOn){
             if(refLink.GetKeyManager().left && refLink.GetKeyManager().right && refLink.GetKeyManager().up && refLink.GetKeyManager().down){}
-            else if(refLink.GetKeyManager().left && refLink.GetKeyManager().right && refLink.GetKeyManager().up ){yMove = -speed;}
-            else if(refLink.GetKeyManager().left && refLink.GetKeyManager().right && refLink.GetKeyManager().down ){yMove = speed;}
-            else if(refLink.GetKeyManager().up && refLink.GetKeyManager().down && refLink.GetKeyManager().left ){xMove = -speed;}
-            else if(refLink.GetKeyManager().up && refLink.GetKeyManager().down && refLink.GetKeyManager().right ){xMove = speed;}
+            else if(refLink.GetKeyManager().left && refLink.GetKeyManager().right && refLink.GetKeyManager().up ){yMove = -speed;playerMoved();}
+            else if(refLink.GetKeyManager().left && refLink.GetKeyManager().right && refLink.GetKeyManager().down ){yMove = speed;playerMoved();}
+            else if(refLink.GetKeyManager().up && refLink.GetKeyManager().down && refLink.GetKeyManager().left ){xMove = -speed;playerMoved();}
+            else if(refLink.GetKeyManager().up && refLink.GetKeyManager().down && refLink.GetKeyManager().right ){xMove = speed;playerMoved();}
             else if(refLink.GetKeyManager().up && refLink.GetKeyManager().left){
                 yMove = (float) (-speed/sqrt(2.0));
                 xMove = (float) (-speed/sqrt(2.0));
+                playerMoved();
             }else if(refLink.GetKeyManager().up && refLink.GetKeyManager().right){
                 yMove = (float) (-speed/sqrt(2.0));
                 xMove = (float) (speed/sqrt(2.0));
+                playerMoved();
             }else if(refLink.GetKeyManager().down && refLink.GetKeyManager().left){
                 yMove = (float) (speed/sqrt(2.0));
                 xMove = (float) (-speed/sqrt(2.0));
+                playerMoved();
             }else if(refLink.GetKeyManager().down && refLink.GetKeyManager().right){
                 yMove = (float) (speed/sqrt(2.0));
                 xMove = (float) (speed/sqrt(2.0));
+                playerMoved();
             }else if(refLink.GetKeyManager().up && refLink.GetKeyManager().down){}
             else if (refLink.GetKeyManager().left && refLink.GetKeyManager().right){}
             else if(refLink.GetKeyManager().up) {
                 yMove  = -speed;
+                playerMoved();
             }else if(refLink.GetKeyManager().down) {
                 yMove = speed;
+                playerMoved();
             }else if(refLink.GetKeyManager().left) {
                 xMove = -speed;
+                playerMoved();
             }else if(refLink.GetKeyManager().right) {
                 xMove = speed;
+                playerMoved();
             }
         }
         // Cream efectul de animatie, la fiecare 8 frame-uri modificam imaginea personajului
