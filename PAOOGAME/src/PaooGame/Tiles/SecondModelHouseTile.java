@@ -36,6 +36,7 @@ public class SecondModelHouseTile {
         public SecondModelHouseTileFive(int id)
         {
             super(Assets.secondModelHouseFive, id);
+            this.collision = true;
         }
     }
     public static class SecondModelHouseTileSix extends Tile
@@ -43,6 +44,7 @@ public class SecondModelHouseTile {
         public SecondModelHouseTileSix(int id)
         {
             super(Assets.secondModelHouseSix, id);
+            this.collision = true;
         }
     }
 }

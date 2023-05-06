@@ -50,6 +50,7 @@ public class FourthModelHouseTile {
         public FourthModelHouseTileSeven(int id)
         {
             super(Assets.fourthModelHouseSeven, id);
+            this.collision = true;
         }
     }
     public static class FourthModelHouseTileEight extends Tile
@@ -57,6 +58,7 @@ public class FourthModelHouseTile {
         public FourthModelHouseTileEight(int id)
         {
             super(Assets.fourthModelHouseEight, id);
+            this.collision = true;
         }
     }
     public static class FourthModelHouseTileNine extends Tile
@@ -64,6 +66,7 @@ public class FourthModelHouseTile {
         public FourthModelHouseTileNine(int id)
         {
             super(Assets.fourthModelHouseNine, id);
+            this.collision = true;
         }
     }
 }

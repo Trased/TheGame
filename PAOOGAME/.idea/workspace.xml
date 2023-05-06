@@ -5,39 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f63f0bd-07c3-4259-ad3b-2a5ee33c327f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/PaooGame/Tiles/FenceTile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Graphics/Assets.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Graphics/Assets.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Tiles/GrassTile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Tiles/GrassTile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Tiles/SandTile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Tiles/SandTile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Tiles/StoneTile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Tiles/StoneTile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Maps/Map.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Maps/Map.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Tiles/Tile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Tiles/Tile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Tiles/bottomGrassTile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Tiles/bottomGrassTile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Tiles/topGrassTile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Tiles/topGrassTile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Tiles/townGrassTile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Tiles/townGrassTile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/textures/HomeMadeTileSet.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/textures/HomeMadeTileSet.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/textures/HomeTownMap.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/textures/HomeTownObject.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/res/textures/HomeMadeTileSet.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/textures/HomeMadeTileSet.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PaooGame/Graphics/Assets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Graphics/Assets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/textures/HomeTownMap.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/textures/Level0Map.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/textures/HomeTownObject.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/textures/Level0Objects.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaooGame/Items/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Items/Hero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaooGame/Items/collisionChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Items/collisionChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaooGame/Maps/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Maps/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaooGame/States/PlayState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/States/PlayState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PaooGame/Tiles/BigGreenTreeTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Tiles/BigGreenTreeTile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PaooGame/Tiles/Fence.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaooGame/Tiles/FenceTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Tiles/FenceTile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PaooGame/Tiles/FifthModelHouseTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Tiles/FifthModelHouseTile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PaooGame/Tiles/FirstModelHouseTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Tiles/FirstModelHouseTile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PaooGame/Tiles/FourthModelHouseTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Tiles/FourthModelHouseTile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PaooGame/Tiles/GrassTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Tiles/GrassTile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PaooGame/Tiles/GreenPineTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Tiles/GreenPineTile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PaooGame/Tiles/GreenTreeTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Tiles/GreenTreeTile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PaooGame/Tiles/InvisibleTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Tiles/InvisibleTile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PaooGame/Tiles/MudTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Tiles/MudTile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PaooGame/Tiles/OrangeTreeTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Tiles/OrangeTreeTile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PaooGame/Tiles/PineTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Tiles/PineTile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PaooGame/Tiles/SandTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Tiles/SandTile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PaooGame/Tiles/SecondModelHouseTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Tiles/SecondModelHouseTile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PaooGame/Tiles/StoneTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Tiles/StoneTile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PaooGame/Tiles/ThirdModelHouseTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Tiles/ThirdModelHouseTile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PaooGame/Tiles/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Tiles/Tile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PaooGame/Tiles/bottomGrassTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Tiles/BottomGrassTile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PaooGame/Tiles/topGrassTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Tiles/TopGrassTile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PaooGame/Tiles/townGrassTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Tiles/TownGrassTile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaooGame/Tiles/TradingPostTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Tiles/TradingPostTile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +219,8 @@
       <workItem from="1682364831523" duration="2622000" />
       <workItem from="1682447726435" duration="6920000" />
       <workItem from="1682486390137" duration="2459000" />
-      <workItem from="1683191287529" duration="3346000" />
+      <workItem from="1683191287529" duration="5371000" />
+      <workItem from="1683344372041" duration="8429000" />
     </task>
     <servers />
   </component>

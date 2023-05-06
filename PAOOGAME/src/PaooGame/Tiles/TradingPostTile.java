@@ -22,6 +22,7 @@ public class TradingPostTile {
         public TradingPostTileThree(int id)
         {
             super(Assets.tradingPostThree, id);
+            this.collision = true;
         }
     }
     public static class TradingPostTileFour extends Tile
@@ -29,6 +30,7 @@ public class TradingPostTile {
         public TradingPostTileFour(int id)
         {
             super(Assets.tradingPostFour, id);
+            this.collision = true;
         }
     }
 }

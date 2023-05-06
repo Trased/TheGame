@@ -32,34 +32,34 @@ public class collisionChecker {
 
 
         if (ref.GetKeyManager().up) {
-            if (ref.GetMap().GetTile(entityColXLeftBorder, entityColYTopBorder).IsSolid() &&
-                ref.GetMap().GetTile(entityColXNearLeftBorder, entityColYTopBorder).IsSolid() ||
-                ref.GetMap().GetTile(entityColXNearRightBorder, entityColYTopBorder).IsSolid() &&
-                ref.GetMap().GetTile(entityColXRightBorder, entityColYTopBorder).IsSolid()) {
+            if (ref.GetMap().GetObject(entityColXLeftBorder, entityColYTopBorder).IsSolid() &&
+                ref.GetMap().GetObject(entityColXNearLeftBorder, entityColYTopBorder).IsSolid() ||
+                ref.GetMap().GetObject(entityColXNearRightBorder, entityColYTopBorder).IsSolid() &&
+                ref.GetMap().GetObject(entityColXRightBorder, entityColYTopBorder).IsSolid()) {
                 entity.collisionOn = true;
             }
         }
         if (ref.GetKeyManager().down) {
-            if (ref.GetMap().GetTile(entityColXLeftBorder, entityColYBottomBorder).IsSolid() &&
-                ref.GetMap().GetTile(entityColXNearLeftBorder, entityColYBottomBorder).IsSolid() ||
-                ref.GetMap().GetTile(entityColXNearRightBorder, entityColYBottomBorder).IsSolid() &&
-                ref.GetMap().GetTile(entityColXRightBorder, entityColYBottomBorder).IsSolid()) {
+            if (ref.GetMap().GetObject(entityColXLeftBorder, entityColYBottomBorder).IsSolid() &&
+                ref.GetMap().GetObject(entityColXNearLeftBorder, entityColYBottomBorder).IsSolid() ||
+                ref.GetMap().GetObject(entityColXNearRightBorder, entityColYBottomBorder).IsSolid() &&
+                ref.GetMap().GetObject(entityColXRightBorder, entityColYBottomBorder).IsSolid()) {
                 entity.collisionOn = true;
             }
         }
         if (ref.GetKeyManager().right) {
-            if (ref.GetMap().GetTile(entityColXRightBorder, entityColYTopBorder).IsSolid() &&
-                ref.GetMap().GetTile(entityColXRightBorder, entityColYNearTopBorder).IsSolid() ||
-                ref.GetMap().GetTile(entityColXRightBorder, entityColYNearBottomBorder).IsSolid() &&
-                ref.GetMap().GetTile(entityColXRightBorder, entityColYBottomBorder).IsSolid()) {
+            if (ref.GetMap().GetObject(entityColXRightBorder, entityColYTopBorder).IsSolid() &&
+                ref.GetMap().GetObject(entityColXRightBorder, entityColYNearTopBorder).IsSolid() ||
+                ref.GetMap().GetObject(entityColXRightBorder, entityColYNearBottomBorder).IsSolid() &&
+                ref.GetMap().GetObject(entityColXRightBorder, entityColYBottomBorder).IsSolid()) {
                 entity.collisionOn = true;
             }
         }
         if (ref.GetKeyManager().left) {
-            if (ref.GetMap().GetTile(entityColXLeftBorder, entityColYTopBorder).IsSolid() &&
-                ref.GetMap().GetTile(entityColXLeftBorder, entityColYNearTopBorder).IsSolid() ||
-                ref.GetMap().GetTile(entityColXLeftBorder, entityColYNearBottomBorder).IsSolid() &&
-                ref.GetMap().GetTile(entityColXLeftBorder, entityColYBottomBorder).IsSolid()) {
+            if (ref.GetMap().GetObject(entityColXLeftBorder, entityColYTopBorder).IsSolid() &&
+                ref.GetMap().GetObject(entityColXLeftBorder, entityColYNearTopBorder).IsSolid() ||
+                ref.GetMap().GetObject(entityColXLeftBorder, entityColYNearBottomBorder).IsSolid() &&
+                ref.GetMap().GetObject(entityColXLeftBorder, entityColYBottomBorder).IsSolid()) {
                 entity.collisionOn = true;
             }
         }

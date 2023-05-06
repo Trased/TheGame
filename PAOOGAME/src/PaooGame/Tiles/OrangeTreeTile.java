@@ -22,6 +22,7 @@ public class OrangeTreeTile {
         public OrangeTreeTileThree(int id)
         {
             super(Assets.orangeTreeThree, id);
+            this.collision = true;
         }
     }
     public static class OrangeTreeTileFour extends Tile
@@ -29,6 +30,7 @@ public class OrangeTreeTile {
         public OrangeTreeTileFour(int id)
         {
             super(Assets.orangeTreeFour, id);
+            this.collision = true;
         }
     }
 }

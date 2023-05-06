@@ -52,5 +52,6 @@ public class PlayState extends State
     {
         map.Draw(g, hero);
         hero.Draw(g);
+        map.DrawObjects(g, hero);
     }
 }

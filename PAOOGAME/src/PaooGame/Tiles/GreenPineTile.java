@@ -22,13 +22,15 @@ public class GreenPineTile {
         public GreenPineTileThree(int id)
         {
             super(Assets.greenPineThree, id);
+            this.collision = true;
         }
+
     }
     public static class GreenPineTileFour extends Tile
     {
-        public GreenPineTileFour(int id)
-        {
+        public GreenPineTileFour(int id) {
             super(Assets.greenPineFour, id);
+            this.collision = true;
         }
     }
 }

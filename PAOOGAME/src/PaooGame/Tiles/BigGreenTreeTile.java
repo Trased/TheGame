@@ -36,6 +36,7 @@ public class BigGreenTreeTile {
         public BigGreenTreeTileFive(int id)
         {
             super(Assets.bigGreenTreeFive, id);
+            this.collision = true;
         }
     }
     public static class BigGreenTreeTileSix extends Tile
@@ -43,6 +44,7 @@ public class BigGreenTreeTile {
         public BigGreenTreeTileSix(int id)
         {
             super(Assets.bigGreenTreeSix, id);
+            this.collision = true;
         }
     }
 }
