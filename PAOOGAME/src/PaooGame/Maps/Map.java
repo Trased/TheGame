@@ -125,7 +125,7 @@ public class Map
     {
         int mapTile;
         try{
-            mapTile = Integer.parseInt(Files.readAllLines(Paths.get("res/textures/Level"+i+"Map.txt")).get(y).split(" ")[x]);
+            mapTile = Integer.parseInt(Files.readAllLines(Paths.get("res/levels/Level"+i+"Map.txt")).get(y).split(" ")[x]);
         } catch(Exception e){
             mapTile = 1;
         }
@@ -136,7 +136,7 @@ public class Map
         ///Definire statica a matricei de coduri de dale.
         int mapTile;
         try{
-            mapTile = Integer.parseInt(Files.readAllLines(Paths.get("res/textures/Level"+i+"Objects.txt")).get(y).split(" ")[x]);
+            mapTile = Integer.parseInt(Files.readAllLines(Paths.get("res/levels/Level"+i+"Objects.txt")).get(y).split(" ")[x]);
         } catch(Exception e){
             mapTile = 1;
         }

@@ -116,7 +116,7 @@ public class Game implements Runnable
         settingsState   = new SettingsState(refLink);
         aboutState      = new AboutState(refLink);
             ///Seteaza starea implicita cu care va fi lansat programul in executie
-        State.SetState(playState);
+        State.SetState(aboutState);
     }
 
     /*! \fn public void run()
@@ -224,6 +224,29 @@ public class Game implements Runnable
         {
                 ///Actualizez starea curenta a jocului daca exista.
             State.GetState().Update();
+            if(refLink.GetKeyManager().esc && !refLink.GetKeyManager().keyPressed){
+                refLink.GetKeyManager().keyPressed = true;
+                if(State.GetState() == playState){
+                    State.SetState(menuState);
+                }else{
+                    State.SetState(playState);
+                }
+            }else if(!refLink.GetKeyManager().esc){
+                refLink.GetKeyManager().keyPressed = false;
+            }
+            if(refLink.GetKeyManager().enter){
+                if(State.GetState() == aboutState && AboutState.getCommNum() == 0){
+                    // TO BE RE-DESIGNED AFTER ADDING DATABSE
+                    State.SetState(playState);
+                }
+                if(State.GetState() == aboutState && AboutState.getCommNum() == 1){
+                    // TO BE IMPLEMENTED AFTER ADDING DATABASE
+                }
+                if(State.GetState() == aboutState && AboutState.getCommNum() == 2){
+                    wnd.GetWndFrame().dispose();
+                    System.exit(0);
+                }
+            }
         }
     }
 
