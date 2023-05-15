@@ -246,6 +246,12 @@ public class Game implements Runnable
                     wnd.GetWndFrame().dispose();
                     System.exit(0);
                 }
+                if(State.GetState() == menuState && MenuState.getCommNum() == 0){
+                    State.SetState(playState);
+                }
+                if(State.GetState() == menuState && MenuState.getCommNum() == 1){
+                    // TO BE IMPLEMENTED AFTER ADDING DATABASE
+                }
             }
         }
     }

@@ -22,11 +22,16 @@ import static java.lang.Math.sqrt;
 public class Hero extends Character implements LocationSubject
 {
     private BufferedImage image;    /*!< Referinta catre imaginea curenta a eroului.*/
+    private int damage;
+    private int health;
 
     ///Fixam caracterul pe mijlocul ecranului
     public final int screenX;
     public final int screenY;
     private ArrayList<PlayerLocationObserver> observers;
+
+    private int SPRITE_COUNTER = 1;
+    private int SPRITE_NUM = 1;
 
     /*! \fn public Hero(RefLinks refLink, float x, float y)
         \brief Constructorul de initializare al clasei Hero.
@@ -48,6 +53,8 @@ public class Hero extends Character implements LocationSubject
         normalBounds.width = 24;
         normalBounds.height = 40;
 
+        damage = 5;
+        health = 100;
             ///Stabilieste pozitia relativa si dimensiunea dreptunghiului de coliziune, starea de atac
         attackBounds.x = 10;
         attackBounds.y = 10;
@@ -230,5 +237,11 @@ public class Hero extends Character implements LocationSubject
             ///doar pentru debug daca se doreste vizualizarea dreptunghiului de coliziune altfel se vor comenta urmatoarele doua linii
         //g.setColor(Color.blue);
         //g.fillRect((int)(x + bounds.x), (int)(y + bounds.y), bounds.width, bounds.height);
+    }
+    public int getDamage(){
+        return damage;
+    }
+    public void setHealth(int damage){
+        health -= damage;
     }
 }

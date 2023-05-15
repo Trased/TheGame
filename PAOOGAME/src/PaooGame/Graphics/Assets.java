@@ -1,6 +1,9 @@
 package PaooGame.Graphics;
 
+import PaooGame.Items.Enemy;
+
 import java.awt.image.BufferedImage;
+import java.io.FileNotFoundException;
 
 /*! \class public class Assets
     \brief Clasa incarca fiecare element grafic necesar jocului.
@@ -130,6 +133,104 @@ public class Assets {
     public static BufferedImage heroAttackUpTwo;
     public static BufferedImage heroAttackUpThree;
 
+    //FirstEnemyTiles
+    public static BufferedImage EnemyTLeftOne;
+    public static BufferedImage EnemyTLeftTwo;
+    public static BufferedImage EnemyTLeftThree;
+    public static BufferedImage EnemyTRightOne;
+    public static BufferedImage EnemyTRightTwo;
+    public static BufferedImage EnemyTRightThree;
+    public static BufferedImage EnemyTUpOne;
+    public static BufferedImage EnemyTUpTwo;
+    public static BufferedImage EnemyTUpThree;
+    public static BufferedImage EnemyTDownOne;
+    public static BufferedImage EnemyTDownTwo;
+    public static BufferedImage EnemyTDownThree;
+    public static BufferedImage EnemyTAttackDownOne;
+    public static BufferedImage EnemyTAttackDownTwo;
+    public static BufferedImage EnemyTAttackDownThree;
+    public static BufferedImage EnemyTAttackLeftOne;
+    public static BufferedImage EnemyTAttackLeftTwo;
+    public static BufferedImage EnemyTAttackLeftThree;
+    public static BufferedImage EnemyTAttackRightOne;
+    public static BufferedImage EnemyTAttackRightTwo;
+    public static BufferedImage EnemyTAttackRightThree;
+    public static BufferedImage EnemyTAttackUpOne;
+    public static BufferedImage EnemyTAttackUpTwo;
+    public static BufferedImage EnemyTAttackUpThree;
+
+    //Second Enemy Tiles
+    public static BufferedImage EnemyOLeftOne;
+    public static BufferedImage EnemyOLeftTwo;
+    public static BufferedImage EnemyOLeftThree;
+    public static BufferedImage EnemyORightOne;
+    public static BufferedImage EnemyORightTwo;
+    public static BufferedImage EnemyORightThree;
+    public static BufferedImage EnemyOUpOne;
+    public static BufferedImage EnemyOUpTwo;
+    public static BufferedImage EnemyOUpThree;
+    public static BufferedImage EnemyODownOne;
+    public static BufferedImage EnemyODownTwo;
+    public static BufferedImage EnemyODownThree;
+    public static BufferedImage EnemyOAttackDownOne;
+    public static BufferedImage EnemyOAttackDownTwo;
+    public static BufferedImage EnemyOAttackDownThree;
+    public static BufferedImage EnemyOAttackLeftOne;
+    public static BufferedImage EnemyOAttackLeftTwo;
+    public static BufferedImage EnemyOAttackLeftThree;
+    public static BufferedImage EnemyOAttackRightOne;
+    public static BufferedImage EnemyOAttackRightTwo;
+    public static BufferedImage EnemyOAttackRightThree;
+    public static BufferedImage EnemyOAttackUpOne;
+    public static BufferedImage EnemyOAttackUpTwo;
+    public static BufferedImage EnemyOAttackUpThree;
+
+
+    public static BufferedImage FirstBossLeftOne;
+    public static BufferedImage FirstBossLeftTwo;
+    public static BufferedImage FirstBossLeftThree;
+    public static BufferedImage FirstBossAttackLeftOne;
+    public static BufferedImage FirstBossAttackLeftTwo;
+    public static BufferedImage FirstBossAttackLeftThree;
+    public static BufferedImage FirstBossRightOne;
+    public static BufferedImage FirstBossRightTwo;
+    public static BufferedImage FirstBossRightThree;
+    public static BufferedImage FirstBossAttackRightOne;
+    public static BufferedImage FirstBossAttackRightTwo;
+    public static BufferedImage FirstBossAttackRightThree;
+
+    public static BufferedImage SecondBossLeftOne;
+    public static BufferedImage SecondBossLeftTwo;
+    public static BufferedImage SecondBossLeftThree;
+    public static BufferedImage SecondBossAttackLeftOne;
+    public static BufferedImage SecondBossAttackLeftTwo;
+    public static BufferedImage SecondBossAttackLeftThree;
+    public static BufferedImage SecondBossRightOne;
+    public static BufferedImage SecondBossRightTwo;
+    public static BufferedImage SecondBossRightThree;
+    public static BufferedImage SecondBossAttackRightOne;
+    public static BufferedImage SecondBossAttackRightTwo;
+    public static BufferedImage SecondBossAttackRightThree;
+
+    public static BufferedImage ThirdBossLeftOne;
+    public static BufferedImage ThirdBossLeftTwo;
+    public static BufferedImage ThirdBossLeftThree;
+    public static BufferedImage ThirdBossAttackLeftOne;
+    public static BufferedImage ThirdBossAttackLeftTwo;
+    public static BufferedImage ThirdBossAttackLeftThree;
+    public static BufferedImage ThirdBossRightOne;
+    public static BufferedImage ThirdBossRightTwo;
+    public static BufferedImage ThirdBossRightThree;
+    public static BufferedImage ThirdBossAttackRightOne;
+    public static BufferedImage ThirdBossAttackRightTwo;
+    public static BufferedImage ThirdBossAttackRightThree;
+    public static BufferedImage FirstNpcOne;
+    public static BufferedImage FirstNpcTwo;
+    public static BufferedImage FirstNpcThree;
+    public static BufferedImage SecondNpcOne;
+    public static BufferedImage SecondNpcTwo;
+    public static BufferedImage SecondNpcThree;
+
 
     /*! \fn public static void Init()
         \brief Functia initializaza referintele catre elementele grafice utilizate.
@@ -141,6 +242,12 @@ public class Assets {
         /// Se creaza temporar un obiect SpriteSheet initializat prin intermediul clasei ImageLoader
         SpriteSheet sheet = new SpriteSheet(ImageLoader.LoadImage("/textures/HomeMadeTileSet.png"));
         SpriteSheet character = new SpriteSheet(ImageLoader.LoadImage("/textures/CharacterSpriteSheet.png"));
+        SpriteSheet enemyOne = new SpriteSheet(ImageLoader.LoadImage("/textures/Enemy1.png"));
+        SpriteSheet enemyTwo = new SpriteSheet(ImageLoader.LoadImage("/textures/Enemy2.png"));
+        SpriteSheet bossOne = new SpriteSheet(ImageLoader.LoadImage("/textures/Boss1.png"));
+        SpriteSheet bossTwo = new SpriteSheet(ImageLoader.LoadImage("/textures/Boss2.png"));
+        SpriteSheet bossThree = new SpriteSheet(ImageLoader.LoadImage("/textures/Boss3.png"));
+        SpriteSheet npc = new SpriteSheet(ImageLoader.LoadImage("/textures/Npc.png"));
 
         /// Se obtin subimaginile corespunzatoare elementelor necesare.
         heroDownOne = character.characterCrop(0, 0);
@@ -168,6 +275,104 @@ public class Assets {
         heroAttackUpTwo = character.characterCrop(4, 3);
         heroAttackUpThree = character.characterCrop(5, 3);
 
+
+        EnemyODownOne = enemyOne.characterCrop(0, 0);
+        EnemyODownTwo = enemyOne.characterCrop(1, 0);
+        EnemyODownThree = enemyOne.characterCrop(2, 0);
+        EnemyOAttackDownOne = enemyOne.characterCrop(3, 0);
+        EnemyOAttackDownTwo = enemyOne.characterCrop(4, 0);
+        EnemyOAttackDownThree = enemyOne.characterCrop(5, 0);
+        EnemyOLeftOne = enemyOne.characterCrop(0, 1);
+        EnemyOLeftTwo = enemyOne.characterCrop(1, 1);
+        EnemyOLeftThree = enemyOne.characterCrop(2, 1);
+        EnemyOAttackLeftOne = enemyOne.characterCrop(3, 1);
+        EnemyOAttackLeftTwo = enemyOne.characterCrop(4, 1);
+        EnemyOAttackLeftThree = enemyOne.characterCrop(5, 1);
+        EnemyORightOne = enemyOne.characterCrop(0, 2);
+        EnemyORightTwo = enemyOne.characterCrop(1, 2);
+        EnemyORightThree = enemyOne.characterCrop(2, 2);
+        EnemyOAttackRightOne = enemyOne.characterCrop(3, 2);
+        EnemyOAttackRightTwo = enemyOne.characterCrop(4, 2);
+        EnemyOAttackRightThree = enemyOne.characterCrop(5, 2);
+        EnemyOUpOne = enemyOne.characterCrop(0, 3);
+        EnemyOUpTwo = enemyOne.characterCrop(1, 3);
+        EnemyOUpThree = enemyOne.characterCrop(2, 3);
+        EnemyOAttackUpOne = enemyOne.characterCrop(3, 3);
+        EnemyOAttackUpTwo = enemyOne.characterCrop(4, 3);
+        EnemyOAttackUpThree = enemyOne.characterCrop(5, 3);
+
+        /// Se obtin subimaginile corespunzatoare elementelor necesare.
+        EnemyTDownOne = enemyTwo.characterCrop(0, 0);
+        EnemyTDownTwo = enemyTwo.characterCrop(1, 0);
+        EnemyTDownThree = enemyTwo.characterCrop(2, 0);
+        EnemyTAttackDownOne = enemyTwo.characterCrop(3, 0);
+        EnemyTAttackDownTwo = enemyTwo.characterCrop(4, 0);
+        EnemyTAttackDownThree = enemyTwo.characterCrop(5, 0);
+        EnemyTLeftOne = enemyTwo.characterCrop(0, 1);
+        EnemyTLeftTwo = enemyTwo.characterCrop(1, 1);
+        EnemyTLeftThree = enemyTwo.characterCrop(2, 1);
+        EnemyTAttackLeftOne = enemyTwo.characterCrop(3, 1);
+        EnemyTAttackLeftTwo = enemyTwo.characterCrop(4, 1);
+        EnemyTAttackLeftThree = enemyTwo.characterCrop(5, 1);
+        EnemyTRightOne = enemyTwo.characterCrop(0, 2);
+        EnemyTRightTwo = enemyTwo.characterCrop(1, 2);
+        EnemyTRightThree = enemyTwo.characterCrop(2, 2);
+        EnemyTAttackRightOne = enemyTwo.characterCrop(3, 2);
+        EnemyTAttackRightTwo = enemyTwo.characterCrop(4, 2);
+        EnemyTAttackRightThree = enemyTwo.characterCrop(5, 2);
+        EnemyTUpOne = enemyTwo.characterCrop(0, 3);
+        EnemyTUpTwo = enemyTwo.characterCrop(1, 3);
+        EnemyTUpThree = enemyTwo.characterCrop(2, 3);
+        EnemyTAttackUpOne = enemyTwo.characterCrop(3, 3);
+        EnemyTAttackUpTwo = enemyTwo.characterCrop(4, 3);
+        EnemyTAttackUpThree = enemyTwo.characterCrop(5, 3);
+
+        FirstBossLeftOne  = bossOne.characterCrop(0,1);
+        FirstBossLeftTwo  = bossOne.characterCrop(1,1);
+        FirstBossLeftThree = bossOne.characterCrop(2,1);
+        FirstBossAttackLeftOne = bossOne.characterCrop(3,1);
+        FirstBossAttackLeftTwo = bossOne.characterCrop(4,1);
+        FirstBossAttackLeftThree = bossOne.characterCrop(5,1);
+        FirstBossRightOne = bossOne.characterCrop(0,0);
+        FirstBossRightTwo = bossOne.characterCrop(1,0);
+        FirstBossRightThree = bossOne.characterCrop(2,0);
+        FirstBossAttackRightOne = bossOne.characterCrop(3,0);
+        FirstBossAttackRightTwo = bossOne.characterCrop(4,0);
+        FirstBossAttackRightThree= bossOne.characterCrop(5,0);
+
+        SecondBossLeftOne= bossTwo.characterCrop(0,1);
+        SecondBossLeftTwo= bossTwo.characterCrop(1,1);
+        SecondBossLeftThree= bossTwo.characterCrop(2,1);
+        SecondBossAttackLeftOne= bossTwo.characterCrop(3,1);
+        SecondBossAttackLeftTwo= bossTwo.characterCrop(4,1);
+        SecondBossAttackLeftThree= bossTwo.characterCrop(5,1);
+        SecondBossRightOne= bossTwo.characterCrop(0,0);
+        SecondBossRightTwo= bossTwo.characterCrop(1,0);
+        SecondBossRightThree= bossTwo.characterCrop(2,0);
+        SecondBossAttackRightOne= bossTwo.characterCrop(3,0);
+        SecondBossAttackRightTwo= bossTwo.characterCrop(4,0);
+        SecondBossAttackRightThree= bossTwo.characterCrop(5,0);
+
+        ThirdBossLeftOne= bossThree.characterCrop(0,1);
+        ThirdBossLeftTwo= bossThree.characterCrop(1,1);
+        ThirdBossLeftThree= bossThree.characterCrop(2,1);
+        ThirdBossAttackLeftOne= bossThree.characterCrop(3,1);
+        ThirdBossAttackLeftTwo= bossThree.characterCrop(4,1);
+        ThirdBossAttackLeftThree= bossThree.characterCrop(5,1);
+        ThirdBossRightOne= bossThree.characterCrop(0,0);
+        ThirdBossRightTwo= bossThree.characterCrop(1,0);
+        ThirdBossRightThree= bossThree.characterCrop(2,0);
+        ThirdBossAttackRightOne= bossThree.characterCrop(3,0);
+        ThirdBossAttackRightTwo= bossThree.characterCrop(4,0);
+        ThirdBossAttackRightThree= bossThree.characterCrop(5,0);
+
+        FirstNpcOne = npc.characterCrop(0,0) ;
+        FirstNpcTwo = npc.characterCrop(1,0) ;
+        FirstNpcThree = npc.characterCrop(2,0) ;
+
+        SecondNpcOne= npc.characterCrop(0,1) ;
+        SecondNpcTwo= npc.characterCrop(1,1) ;
+        SecondNpcThree= npc.characterCrop(2,1) ;
 
         stone = sheet.crop(9, 5);
         sand = sheet.crop(6, 4);

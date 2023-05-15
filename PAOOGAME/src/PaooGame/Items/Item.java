@@ -21,8 +21,6 @@ public abstract class Item
     protected Rectangle attackBounds;   /*!< Dreptunghiul de coliziune aferent starii de atac.*/
     protected RefLinks refLink;         /*!< O referinte catre un obiect "shortcut", obiect ce contine o serie de referinte utile in program.*/
     protected boolean collisionOn = false;
-    public int SPRITE_COUNTER = 1;
-    public int SPRITE_NUM = 1;
 
     /*! \fn public Item(RefLinks refLink, float x, float y, int width, int height)
         \brief Constructor de initializare al clasei

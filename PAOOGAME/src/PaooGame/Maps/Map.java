@@ -127,7 +127,7 @@ public class Map
         try{
             mapTile = Integer.parseInt(Files.readAllLines(Paths.get("res/levels/Level"+i+"Map.txt")).get(y).split(" ")[x]);
         } catch(Exception e){
-            mapTile = 1;
+            return mapTile = 1;
         }
         return mapTile;
     }

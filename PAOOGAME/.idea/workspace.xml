@@ -7,22 +7,24 @@
     <list default="true" id="9f63f0bd-07c3-4259-ad3b-2a5ee33c327f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Input/KeyManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Input/KeyManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/States/AboutState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/States/AboutState.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Graphics/Assets.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Graphics/Assets.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Items/Hero.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Items/Hero.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Items/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Items/Item.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Items/NPC.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Items/NPC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Maps/Map.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Maps/Map.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/States/MenuState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/States/MenuState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/textures/Level0Map.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/levels/Level0Map.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/textures/Level0Objects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/levels/Level0Objects.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/textures/Level1Map.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/levels/Level1Map.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/textures/Level1Objects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/levels/Level1Objects.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/textures/Level2Map.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/levels/Level2Map.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/textures/Level2Objects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/levels/Level2Objects.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/textures/Level3Map.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/levels/Level3Map.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/textures/Level3Objects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/levels/Level3Objects.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/States/PlayState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/States/PlayState.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/font/BAHNSCHRIFT.TTF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/font/BAHNSCHRIFT.TTF" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PaooGame/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PaooGame/Input/KeyManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Input/KeyManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaooGame/Graphics/Assets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Graphics/Assets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaooGame/Items/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Items/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaooGame/Items/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Items/Hero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaooGame/Items/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Items/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaooGame/Items/NPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Items/NPC.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PaooGame/Maps/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Maps/Map.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PaooGame/Observer/PlayerLocationObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Observer/PlayerLocationObserver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PaooGame/States/AboutState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/States/AboutState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaooGame/States/MenuState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/States/MenuState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaooGame/States/PlayState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/States/PlayState.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +34,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -55,9 +58,12 @@
     <setting file="file://$PROJECT_DIR$/src/PaooGame/Game.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/PaooGame/GameWindow/GameWindow.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/PaooGame/Graphics/Assets.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/PaooGame/Graphics/SpriteSheet.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/PaooGame/Items/Enemy.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/PaooGame/Items/Hero.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/PaooGame/Maps/Map.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/PaooGame/RefLinks.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/PaooGame/States/MenuState.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/PaooGame/States/PlayState.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/PaooGame/Tiles/Tile.java" root0="SKIP_INSPECTION" />
   </component>
@@ -134,33 +140,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "E:/!MyFiles/Fac/GITH/PLA/TheGame/PAOOGAME",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/!MyFiles/Fac/GITH/PLA/TheGame/PAOOGAME&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="PaooGame" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\!MyFiles\Fac\GITH\PLA\TheGame\PAOOGAME\res\levels" />
       <recent name="E:\!MyFiles\Fac\GITH\PLA\TheGame\PAOOGAME\res\textures" />
+      <recent name="E:\!MyFiles\Fac\GITH\PLA\TheGame\PAOOGAME\res\levels" />
     </key>
   </component>
   <component name="RunManager">
@@ -219,7 +225,17 @@
       <workItem from="1683521393007" duration="844000" />
       <workItem from="1683526002357" duration="1208000" />
       <workItem from="1683567863309" duration="2711000" />
-      <workItem from="1683619997791" duration="6997000" />
+      <workItem from="1683619997791" duration="7334000" />
+      <workItem from="1683643086355" duration="1014000" />
+      <workItem from="1683644138464" duration="4000" />
+      <workItem from="1683656134303" duration="2946000" />
+      <workItem from="1683797835561" duration="788000" />
+      <workItem from="1683973092467" duration="10840000" />
+      <workItem from="1683989527733" duration="1502000" />
+      <workItem from="1683993740798" duration="699000" />
+      <workItem from="1684000660360" duration="2532000" />
+      <workItem from="1684050415028" duration="5296000" />
+      <workItem from="1684123646709" duration="408000" />
     </task>
     <servers />
   </component>

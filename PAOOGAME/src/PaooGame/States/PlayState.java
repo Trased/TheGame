@@ -1,5 +1,6 @@
 package PaooGame.States;
 
+import PaooGame.Items.Enemy;
 import PaooGame.Items.Hero;
 import PaooGame.Observer.PlayerLocationObserver;
 import PaooGame.RefLinks;
@@ -14,6 +15,7 @@ import java.awt.*;
 public class PlayState extends State implements PlayerLocationObserver
 {
     private Hero hero;  /*!< Referinta catre obiectul animat erou (controlat de utilizator).*/
+    private Enemy enem;
     private Map map;    /*!< Referinta catre harta curenta.*/
 
     /*! \fn public PlayState(RefLinks refLink)
@@ -32,6 +34,7 @@ public class PlayState extends State implements PlayerLocationObserver
             ///Construieste eroul
         hero = new Hero(refLink,30* Tile.TILE_HEIGHT, 20*Tile.TILE_WIDTH); // x, y sunt coordonatele unde se spawneaza :: TO DO in viitor: SQL care retine unde e personajul la log-out!!
         hero.registerObserver(this);
+        enem = new Enemy(refLink, 32*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
     }
     public void ObserverUpdate() {
         int check = playerIsInCertainLocation();
@@ -95,6 +98,7 @@ public class PlayState extends State implements PlayerLocationObserver
     {
         map.Update();
         hero.Update();
+        enem.Update();
     }
 
     /*! \fn public void Draw(Graphics g)
@@ -109,10 +113,13 @@ public class PlayState extends State implements PlayerLocationObserver
             map.Draw(g, hero);
             map.DrawObjects(g);
             hero.Draw(g);
+            enem.Draw(g);
         }else {
             map.Draw(g, hero);
+            enem.Draw(g);
             hero.Draw(g);
             map.DrawObjects(g);
+
         }
     }
 }
