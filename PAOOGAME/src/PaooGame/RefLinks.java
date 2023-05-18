@@ -14,7 +14,7 @@ public class RefLinks
 {
     private Game game;          /*!< Referinta catre obiectul Game.*/
     private Map map;            /*!< Referinta catre harta curenta.*/
-    public Collision cCol = new Collision(this);
+    private  Collision col = new Collision(this);
 
     public final int maxWorldCol = 60;
     public final int maxWorldRow = 40;
@@ -62,6 +62,7 @@ public class RefLinks
         return game;
     }
 
+    public Collision GetCollision() {return col;}
     /*! \fn public void SetGame(Game game)
         \brief Seteaza referinta catre un obiect Game.
 

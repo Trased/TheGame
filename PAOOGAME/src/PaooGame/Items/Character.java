@@ -19,6 +19,7 @@ public abstract class Character extends Item
     protected float speed;  /*!< Retine viteza de deplasare caracterului.*/
     protected float xMove;  /*!< Retine noua pozitie a caracterului pe axa X.*/
     protected float yMove;  /*!< Retine noua pozitie a caracterului pe axa Y.*/
+    protected boolean checkAttack = false;
 
     /*! \fn public Character(RefLinks refLink, float x, float y, int width, int height)
         \brief Constructor de initializare al clasei Character
@@ -131,5 +132,6 @@ public abstract class Character extends Item
     {
         this.yMove = yMove;
     }
+
 }
 

@@ -30,8 +30,15 @@ public class Hero extends Character implements LocationSubject
     public final int screenY;
     private ArrayList<PlayerLocationObserver> observers;
 
-    private int SPRITE_COUNTER = 1;
-    private int SPRITE_NUM = 1;
+    private int spriteCounter = 1;
+    private int spriteNum = 1;
+    private boolean attacking = false;
+    private boolean upPressed;
+    private boolean downPressed;
+    private boolean leftPressed;
+    private boolean rightPressed;
+
+    private Rectangle trueBounds;
 
     /*! \fn public Hero(RefLinks refLink, float x, float y)
         \brief Constructorul de initializare al clasei Hero.
@@ -53,13 +60,15 @@ public class Hero extends Character implements LocationSubject
         normalBounds.width = 24;
         normalBounds.height = 40;
 
-        damage = 5;
-        health = 100;
+        damage = 50;
+        health = 500;
             ///Stabilieste pozitia relativa si dimensiunea dreptunghiului de coliziune, starea de atac
-        attackBounds.x = 10;
-        attackBounds.y = 10;
-        attackBounds.width = 38;
-        attackBounds.height = 38;
+        attackBounds.x =30;
+        attackBounds.y = 0;
+        attackBounds.width = 32;
+        attackBounds.height = 32;
+
+        trueBounds = new Rectangle((int) x + normalBounds.x, (int) y+normalBounds.y, normalBounds.width, normalBounds.height);
 
         screenX = refLink.GetWidth() / 2;
         screenY = refLink.GetHeight() / 2;
@@ -99,63 +108,162 @@ public class Hero extends Character implements LocationSubject
         Move();
             ///Actualizeaza imaginea
 
-        if(refLink.GetKeyManager().up){
-            if(refLink.GetKeyManager().down){}
-            else {
-                if (SPRITE_NUM == 1) {
-                    image = Assets.heroUpOne;
-                }
-                if (SPRITE_NUM == 2) {
-                    image = Assets.heroUpTwo;
-                }
-                if (SPRITE_NUM == 3) {
-                    image = Assets.heroUpThree;
-                }
+        if(refLink.GetKeyManager().up && !refLink.GetKeyManager().down){
+           {
+               if(attacking){
+                   if(!rightPressed && !leftPressed && !downPressed){
+                       upPressed = true;
+                   }
+               }else {
+                   if (spriteNum == 1) {
+                       image = Assets.heroUpOne;
+                   }
+                   if (spriteNum == 2) {
+                       image = Assets.heroUpTwo;
+                   }
+                   if (spriteNum == 3) {
+                       image = Assets.heroUpThree;
+                   }
+               }
             }
         }
-        if(refLink.GetKeyManager().down){
-            if(refLink.GetKeyManager().up){}
+        if(refLink.GetKeyManager().down && !refLink.GetKeyManager().up){
+            if(attacking){
+                if(!upPressed && !leftPressed && !rightPressed){
+
+                    downPressed = true;
+                }
+            }
             else {
-                if (SPRITE_NUM == 1) {
+                if (spriteNum == 1) {
                     image = Assets.heroDownOne;
                 }
-                if (SPRITE_NUM == 2) {
+                if (spriteNum == 2) {
                     image = Assets.heroDownTwo;
                 }
-                if (SPRITE_NUM == 3) {
+                if (spriteNum == 3) {
                     image = Assets.heroDownThree;
                 }
             }
         }
-        if(refLink.GetKeyManager().left)
+        if(refLink.GetKeyManager().left && !refLink.GetKeyManager().right)
         {
-            if(refLink.GetKeyManager().right){}
+            if(attacking){
+                if(!upPressed && !rightPressed && !downPressed){
+
+                    leftPressed = true;
+                }
+            }
             else {
-                if (SPRITE_NUM == 1) {
+                if (spriteNum == 1) {
                     image = Assets.heroLeftOne;
                 }
-                if (SPRITE_NUM == 2) {
+                if (spriteNum == 2) {
                     image = Assets.heroLeftTwo;
                 }
-                if (SPRITE_NUM == 3) {
+                if (spriteNum == 3) {
                     image = Assets.heroLeftThree;
                 }
             }
         }
-        if(refLink.GetKeyManager().right) {
-            if(refLink.GetKeyManager().left){}
+        if(refLink.GetKeyManager().right && !refLink.GetKeyManager().left) {
+            if(attacking){
+                if(!upPressed && !leftPressed && !downPressed){
+
+                    rightPressed = true;
+                }
+            }
             else {
-                if (SPRITE_NUM == 1) {
+                if (spriteNum == 1) {
                     image = Assets.heroRightOne;
                 }
-                if (SPRITE_NUM == 2) {
+                if (spriteNum == 2) {
                     image = Assets.heroRightTwo;
                 }
-                if (SPRITE_NUM == 3) {
+                if (spriteNum == 3) {
                     image = Assets.heroRightThree;
                 }
             }
         }
+        if(attacking) {
+            if (checkHeroUp() || upPressed) {
+                attackBounds.setLocation(30,0);
+                upPressed = true;
+                if (spriteNum == 1) {
+                    image = Assets.heroAttackUpOne;
+                } else if (spriteNum == 2) {
+                    image = Assets.heroAttackUpTwo;
+                } else if (spriteNum == 3) {
+                    image = Assets.heroAttackUpThree;
+                } else {
+                    image = Assets.heroUpOne;
+                    upPressed = false;
+                }
+            } else if (checkHeroDown() || downPressed) {
+                attackBounds.setLocation(30,60);
+                downPressed = true;
+                if (spriteNum == 1) {
+                    image = Assets.heroAttackDownOne;
+                } else if (spriteNum == 2) {
+                    image = Assets.heroAttackDownTwo;
+                } else if (spriteNum == 3) {
+                    image = Assets.heroAttackDownThree;
+                } else {
+                    image = Assets.heroDownOne;
+                    downPressed = false;
+                }
+            } else if (checkHeroLeft() || leftPressed) {
+                attackBounds.setLocation(0,30);
+                leftPressed = true;
+                if (spriteNum == 1) {
+                    image = Assets.heroAttackLeftOne;
+                } else if (spriteNum == 2) {
+                    image = Assets.heroAttackLeftTwo;
+                } else if (spriteNum == 3) {
+                    image = Assets.heroAttackLeftThree;
+                } else {
+                    image = Assets.heroLeftOne;
+                    leftPressed = false;
+                }
+            } else if (checkHeroRight() || rightPressed) {
+                attackBounds.setLocation(60,30);
+                rightPressed = true;
+                if (spriteNum == 1) {
+                    image = Assets.heroAttackRightOne;
+                } else if (spriteNum == 2) {
+                    image = Assets.heroAttackRightTwo;
+                } else if (spriteNum == 3) {
+                    image = Assets.heroAttackRightThree;
+                } else {
+                    image = Assets.heroRightOne;
+                    rightPressed = false;
+                }
+            }
+        }
+    }
+    private boolean checkHeroUp(){
+        if(image == Assets.heroUpOne || image == Assets.heroUpTwo || image == Assets.heroUpThree)
+            return true;
+        else
+            return false;
+    }
+    private boolean checkHeroDown(){
+        if(image == Assets.heroDownOne || image == Assets.heroDownTwo || image == Assets.heroDownThree)
+            return true;
+        else
+            return false;
+    }
+    private boolean checkHeroLeft(){
+        if(image == Assets.heroLeftOne || image == Assets.heroLeftTwo || image == Assets.heroLeftThree)
+            return true;
+        else
+            return false;
+    }
+    private boolean checkHeroRight(){
+        if(image == Assets.heroRightOne || image == Assets.heroRightTwo || image == Assets.heroRightThree)
+            return true;
+        else
+            return false;
     }
 
     /*! \fn private void GetInput()
@@ -167,9 +275,8 @@ public class Hero extends Character implements LocationSubject
         xMove = 0;
         yMove = 0;
         // Verificam coliziunea
-
         collisionOn = false;
-        refLink.cCol.checkTile(this);
+        refLink.GetCollision().checkTile(this);
         if(!collisionOn){
             if(refLink.GetKeyManager().left && refLink.GetKeyManager().right && refLink.GetKeyManager().up && refLink.GetKeyManager().down){}
             else if(refLink.GetKeyManager().left && refLink.GetKeyManager().right && refLink.GetKeyManager().up ){yMove = -speed;playerMoved();}
@@ -208,22 +315,48 @@ public class Hero extends Character implements LocationSubject
                 playerMoved();
             }
         }
+        if(refLink.GetKeyManager().ability){
+            attacking = true;
+        }
         // Cream efectul de animatie, la fiecare 8 frame-uri modificam imaginea personajului
         // Numarul de frame-uri se poate mari/micsora pentru a modifica viteza de update a frame-urilor.
-        SPRITE_COUNTER++;
-        if(SPRITE_COUNTER > 8){
-            if(SPRITE_NUM == 1){
-                SPRITE_NUM = 2;
+        if(!attacking) {
+            spriteCounter++;
+            if (spriteCounter > 8) {
+                if (spriteNum == 1) {
+                    spriteNum = 2;
+                } else if (spriteNum == 2) {
+                    spriteNum = 3;
+                } else if (spriteNum == 3) {
+                    spriteNum = 1;
+                }
+                spriteCounter = 0;
             }
-            else if(SPRITE_NUM == 2) {
-                SPRITE_NUM = 3;
-            }else if(SPRITE_NUM == 3){
-                SPRITE_NUM = 1;
+        }else{
+            spriteCounter++;
+            if (spriteCounter <= 5) {
+                spriteNum = 1;
+            }if(spriteCounter > 5 && spriteCounter <= 15 ){
+                spriteNum = 2;
             }
-            SPRITE_COUNTER = 0;
+            if(spriteCounter > 15 && spriteCounter < 25 ){
+                spriteNum = 3;
+                if(spriteCounter == 20){
+                    checkAttack = true;
+                }else{
+                    checkAttack=false;
+                }
+            }
+            if(spriteCounter > 25 && spriteCounter < 30){
+                spriteNum = 4;
+            }
+            if(spriteCounter > 30){
+                spriteNum = 1;
+                spriteCounter = 0;
+                attacking = false;
+            }
         }
     }
-
     /*! \fn public void Draw(Graphics g)
         \brief Randeaza/deseneaza eroul in noua pozitie.
 
@@ -233,15 +366,26 @@ public class Hero extends Character implements LocationSubject
     public void Draw(Graphics g)
     {
         g.drawImage(image, (int)x, (int)y, width, height, null);
-
             ///doar pentru debug daca se doreste vizualizarea dreptunghiului de coliziune altfel se vor comenta urmatoarele doua linii
-        //g.setColor(Color.blue);
-        //g.fillRect((int)(x + bounds.x), (int)(y + bounds.y), bounds.width, bounds.height);
+        /*
+        g.setColor(Color.green);
+        g.fillRect((int)(x + bounds.x), (int)(y + bounds.y), bounds.width, bounds.height);
+        g.setColor(Color.blue);
+        g.fillRect((int)(x + attackBounds.x), (int)(y + attackBounds.y), attackBounds.width, attackBounds.height);
+         */
     }
     public int getDamage(){
+        checkAttack = false;
         return damage;
     }
-    public void setHealth(int damage){
+    public void HeroDamage(int damage){
         health -= damage;
+    }
+    public void ResetHealth(){
+        health = 300;
+    }
+    public Rectangle getNormalBounds(){
+        trueBounds.setLocation((int) x + normalBounds.x, (int) y+normalBounds.y);
+        return trueBounds;
     }
 }

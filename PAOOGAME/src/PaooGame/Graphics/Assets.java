@@ -1,9 +1,8 @@
 package PaooGame.Graphics;
 
-import PaooGame.Items.Enemy;
+import PaooGame.Items.Arrow;
 
 import java.awt.image.BufferedImage;
-import java.io.FileNotFoundException;
 
 /*! \class public class Assets
     \brief Clasa incarca fiecare element grafic necesar jocului.
@@ -186,50 +185,25 @@ public class Assets {
     public static BufferedImage EnemyOAttackUpThree;
 
 
-    public static BufferedImage FirstBossLeftOne;
-    public static BufferedImage FirstBossLeftTwo;
-    public static BufferedImage FirstBossLeftThree;
-    public static BufferedImage FirstBossAttackLeftOne;
-    public static BufferedImage FirstBossAttackLeftTwo;
-    public static BufferedImage FirstBossAttackLeftThree;
-    public static BufferedImage FirstBossRightOne;
-    public static BufferedImage FirstBossRightTwo;
-    public static BufferedImage FirstBossRightThree;
-    public static BufferedImage FirstBossAttackRightOne;
-    public static BufferedImage FirstBossAttackRightTwo;
-    public static BufferedImage FirstBossAttackRightThree;
-
-    public static BufferedImage SecondBossLeftOne;
-    public static BufferedImage SecondBossLeftTwo;
-    public static BufferedImage SecondBossLeftThree;
-    public static BufferedImage SecondBossAttackLeftOne;
-    public static BufferedImage SecondBossAttackLeftTwo;
-    public static BufferedImage SecondBossAttackLeftThree;
-    public static BufferedImage SecondBossRightOne;
-    public static BufferedImage SecondBossRightTwo;
-    public static BufferedImage SecondBossRightThree;
-    public static BufferedImage SecondBossAttackRightOne;
-    public static BufferedImage SecondBossAttackRightTwo;
-    public static BufferedImage SecondBossAttackRightThree;
-
-    public static BufferedImage ThirdBossLeftOne;
-    public static BufferedImage ThirdBossLeftTwo;
-    public static BufferedImage ThirdBossLeftThree;
-    public static BufferedImage ThirdBossAttackLeftOne;
-    public static BufferedImage ThirdBossAttackLeftTwo;
-    public static BufferedImage ThirdBossAttackLeftThree;
-    public static BufferedImage ThirdBossRightOne;
-    public static BufferedImage ThirdBossRightTwo;
-    public static BufferedImage ThirdBossRightThree;
-    public static BufferedImage ThirdBossAttackRightOne;
-    public static BufferedImage ThirdBossAttackRightTwo;
-    public static BufferedImage ThirdBossAttackRightThree;
+    public static BufferedImage[] BossLeftOne= new BufferedImage[3];
+    public static BufferedImage[] BossLeftTwo= new BufferedImage[3];
+    public static BufferedImage[] BossLeftThree= new BufferedImage[3];
+    public static BufferedImage[] BossAttackLeftOne= new BufferedImage[3];
+    public static BufferedImage[] BossAttackLeftTwo= new BufferedImage[3];
+    public static BufferedImage[] BossAttackLeftThree= new BufferedImage[3];
+    public static BufferedImage[] BossRightOne= new BufferedImage[3];
+    public static BufferedImage[] BossRightTwo= new BufferedImage[3];
+    public static BufferedImage[] BossRightThree= new BufferedImage[3];
+    public static BufferedImage[] BossAttackRightOne= new BufferedImage[3];
+    public static BufferedImage[] BossAttackRightTwo= new BufferedImage[3];
+    public static BufferedImage[] BossAttackRightThree= new BufferedImage[3];
     public static BufferedImage FirstNpcOne;
     public static BufferedImage FirstNpcTwo;
     public static BufferedImage FirstNpcThree;
     public static BufferedImage SecondNpcOne;
     public static BufferedImage SecondNpcTwo;
     public static BufferedImage SecondNpcThree;
+    public static BufferedImage[] arrow = new BufferedImage[4];
 
 
     /*! \fn public static void Init()
@@ -327,44 +301,44 @@ public class Assets {
         EnemyTAttackUpTwo = enemyTwo.characterCrop(4, 3);
         EnemyTAttackUpThree = enemyTwo.characterCrop(5, 3);
 
-        FirstBossLeftOne  = bossOne.characterCrop(0,1);
-        FirstBossLeftTwo  = bossOne.characterCrop(1,1);
-        FirstBossLeftThree = bossOne.characterCrop(2,1);
-        FirstBossAttackLeftOne = bossOne.characterCrop(3,1);
-        FirstBossAttackLeftTwo = bossOne.characterCrop(4,1);
-        FirstBossAttackLeftThree = bossOne.characterCrop(5,1);
-        FirstBossRightOne = bossOne.characterCrop(0,0);
-        FirstBossRightTwo = bossOne.characterCrop(1,0);
-        FirstBossRightThree = bossOne.characterCrop(2,0);
-        FirstBossAttackRightOne = bossOne.characterCrop(3,0);
-        FirstBossAttackRightTwo = bossOne.characterCrop(4,0);
-        FirstBossAttackRightThree= bossOne.characterCrop(5,0);
+        BossLeftOne[0]  = bossOne.bossCrop(0,1);
+        BossLeftTwo[0]  = bossOne.bossCrop(1,1);
+        BossLeftThree[0] = bossOne.bossCrop(2,1);
+        BossAttackLeftOne[0] = bossOne.bossCrop(3,1);
+        BossAttackLeftTwo[0] = bossOne.bossCrop(4,1);
+        BossAttackLeftThree[0] = bossOne.bossCrop(5,1);
+        BossRightOne[0] = bossOne.bossCrop(0,0);
+        BossRightTwo[0] = bossOne.bossCrop(1,0);
+        BossRightThree[0] = bossOne.bossCrop(2,0);
+        BossAttackRightOne[0] = bossOne.bossCrop(3,0);
+        BossAttackRightTwo[0] = bossOne.bossCrop(4,0);
+        BossAttackRightThree[0]= bossOne.bossCrop(5,0);
 
-        SecondBossLeftOne= bossTwo.characterCrop(0,1);
-        SecondBossLeftTwo= bossTwo.characterCrop(1,1);
-        SecondBossLeftThree= bossTwo.characterCrop(2,1);
-        SecondBossAttackLeftOne= bossTwo.characterCrop(3,1);
-        SecondBossAttackLeftTwo= bossTwo.characterCrop(4,1);
-        SecondBossAttackLeftThree= bossTwo.characterCrop(5,1);
-        SecondBossRightOne= bossTwo.characterCrop(0,0);
-        SecondBossRightTwo= bossTwo.characterCrop(1,0);
-        SecondBossRightThree= bossTwo.characterCrop(2,0);
-        SecondBossAttackRightOne= bossTwo.characterCrop(3,0);
-        SecondBossAttackRightTwo= bossTwo.characterCrop(4,0);
-        SecondBossAttackRightThree= bossTwo.characterCrop(5,0);
+        BossLeftOne[1]= bossTwo.bossCrop(0,1);
+        BossLeftTwo[1]= bossTwo.bossCrop(1,1);
+        BossLeftThree[1]= bossTwo.bossCrop(2,1);
+        BossAttackLeftOne[1]= bossTwo.bossCrop(3,1);
+        BossAttackLeftTwo[1]= bossTwo.bossCrop(4,1);
+        BossAttackLeftThree[1]= bossTwo.bossCrop(5,1);
+        BossRightOne[1]= bossTwo.bossCrop(0,0);
+        BossRightTwo[1]= bossTwo.bossCrop(1,0);
+        BossRightThree[1]= bossTwo.bossCrop(2,0);
+        BossAttackRightOne[1]= bossTwo.bossCrop(3,0);
+        BossAttackRightTwo[1]= bossTwo.bossCrop(4,0);
+        BossAttackRightThree[1]= bossTwo.bossCrop(5,0);
 
-        ThirdBossLeftOne= bossThree.characterCrop(0,1);
-        ThirdBossLeftTwo= bossThree.characterCrop(1,1);
-        ThirdBossLeftThree= bossThree.characterCrop(2,1);
-        ThirdBossAttackLeftOne= bossThree.characterCrop(3,1);
-        ThirdBossAttackLeftTwo= bossThree.characterCrop(4,1);
-        ThirdBossAttackLeftThree= bossThree.characterCrop(5,1);
-        ThirdBossRightOne= bossThree.characterCrop(0,0);
-        ThirdBossRightTwo= bossThree.characterCrop(1,0);
-        ThirdBossRightThree= bossThree.characterCrop(2,0);
-        ThirdBossAttackRightOne= bossThree.characterCrop(3,0);
-        ThirdBossAttackRightTwo= bossThree.characterCrop(4,0);
-        ThirdBossAttackRightThree= bossThree.characterCrop(5,0);
+        BossLeftOne[2] = bossThree.bossCrop(0,1);
+        BossLeftTwo[2] = bossThree.bossCrop(1,1);
+        BossLeftThree[2]= bossThree.bossCrop(2,1);
+        BossAttackLeftOne[2]= bossThree.bossCrop(3,1);
+        BossAttackLeftTwo[2]= bossThree.bossCrop(4,1);
+        BossAttackLeftThree[2]= bossThree.bossCrop(5,1);
+        BossRightOne[2]= bossThree.bossCrop(0,0);
+        BossRightTwo[2]= bossThree.bossCrop(1,0);
+        BossRightThree[2]= bossThree.bossCrop(2,0);
+        BossAttackRightOne[2]= bossThree.bossCrop(3,0);
+        BossAttackRightTwo[2]= bossThree.bossCrop(4,0);
+        BossAttackRightThree[2]= bossThree.bossCrop(5,0);
 
         FirstNpcOne = npc.characterCrop(0,0) ;
         FirstNpcTwo = npc.characterCrop(1,0) ;
@@ -481,5 +455,10 @@ public class Assets {
         tradingPostFour= sheet.crop(7,1);
 
         invisible = sheet.crop(0,14);
+
+        arrow[0] = sheet.crop(9,7);
+        arrow[1] = sheet.crop(9,8);
+        arrow[2] = sheet.crop(9,10);
+        arrow[3] = sheet.crop(9,9);
     }
 }

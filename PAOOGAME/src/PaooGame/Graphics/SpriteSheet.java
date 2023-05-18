@@ -49,4 +49,7 @@ public class SpriteSheet
         /// se obtine inmultind numarul de ordine al dalei cu dimensiunea in pixeli a unei dale.
         return spriteSheet.getSubimage(x * characterTileWidth, y * characterTileHeight, characterTileWidth, characterTileHeight);
     }
+    public BufferedImage bossCrop(int x, int y){
+        return spriteSheet.getSubimage(x*96,y*96, 96,96);
+    }
 }

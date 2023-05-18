@@ -1,6 +1,8 @@
 package PaooGame.States;
 
 import java.awt.*;
+
+import PaooGame.Items.Hero;
 import PaooGame.RefLinks;
 
 /*! \class State
@@ -41,4 +43,5 @@ public abstract class State
     public abstract void Update();
         ///Metoda abstracta destinata desenarii starii curente
     public abstract void Draw(Graphics g);
+
 }

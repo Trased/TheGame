@@ -1,7 +1,9 @@
 package PaooGame.States;
 
-import PaooGame.Items.Enemy;
-import PaooGame.Items.Hero;
+import PaooGame.Factory.ArcherFactory;
+import PaooGame.Factory.NPCFactory;
+import PaooGame.Factory.WarriorFactory;
+import PaooGame.Items.*;
 import PaooGame.Observer.PlayerLocationObserver;
 import PaooGame.RefLinks;
 import PaooGame.Maps.Map;
@@ -15,8 +17,12 @@ import java.awt.*;
 public class PlayState extends State implements PlayerLocationObserver
 {
     private Hero hero;  /*!< Referinta catre obiectul animat erou (controlat de utilizator).*/
-    private Enemy enem;
+
+    private NPC[][] npc;
+    private NPC[] boss;
     private Map map;    /*!< Referinta catre harta curenta.*/
+    private boolean[] levelFinished = new boolean[4];
+    private boolean notEmpty;
 
     /*! \fn public PlayState(RefLinks refLink)
         \brief Constructorul de initializare al clasei
@@ -34,7 +40,42 @@ public class PlayState extends State implements PlayerLocationObserver
             ///Construieste eroul
         hero = new Hero(refLink,30* Tile.TILE_HEIGHT, 20*Tile.TILE_WIDTH); // x, y sunt coordonatele unde se spawneaza :: TO DO in viitor: SQL care retine unde e personajul la log-out!!
         hero.registerObserver(this);
-        enem = new Enemy(refLink, 32*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
+        npc = new NPC[4][10];
+        boss = new NPC[3];
+        NPCFactory archerFactory = new ArcherFactory(refLink);
+        NPCFactory warriorFactory = new WarriorFactory(refLink);
+
+        npc[1][0] = archerFactory.createArcher(32*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
+        npc[1][1] = archerFactory.createArcher(32*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
+        npc[1][2] = archerFactory.createArcher(32*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
+        npc[1][3] = archerFactory.createArcher(32*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
+        npc[1][4] = archerFactory.createArcher(32*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
+        npc[1][5] = archerFactory.createArcher(32*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
+        npc[1][6] = archerFactory.createArcher(32*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
+        npc[1][7] = archerFactory.createArcher(32*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
+        boss[0] = new Boss(refLink,32* Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 2, 0);
+
+        npc[2][1] = warriorFactory.createWarrior(34*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
+        npc[2][2] = warriorFactory.createWarrior(34*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
+        npc[2][3] = warriorFactory.createWarrior(34*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
+        npc[2][4] = warriorFactory.createWarrior(34*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
+        npc[2][5] = warriorFactory.createWarrior(34*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
+        npc[2][6] = warriorFactory.createWarrior(34*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
+        npc[2][7] = warriorFactory.createWarrior(34*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
+        boss[1] = new Boss(refLink,32* Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 2, 1);
+
+        npc[3][0] = warriorFactory.createWarrior(34*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
+        npc[3][1] = warriorFactory.createWarrior(34*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
+        npc[3][2] = warriorFactory.createWarrior(34*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
+        npc[3][3] = warriorFactory.createWarrior(34*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
+        npc[3][4] = warriorFactory.createWarrior(34*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
+        npc[3][5] = archerFactory.createArcher(34*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
+        npc[3][6] = archerFactory.createArcher(34*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
+        npc[3][7] = archerFactory.createArcher(34*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
+
+        boss[2] = new Boss(refLink,32* Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 2, 2);
+
+        npc[0][2] = new Professor(refLink, 36*Tile.TILE_HEIGHT, 11*Tile.TILE_WIDTH, 0);
     }
     public void ObserverUpdate() {
         int check = playerIsInCertainLocation();
@@ -48,38 +89,44 @@ public class PlayState extends State implements PlayerLocationObserver
             if (hero.GetX() > 870 && hero.GetX() < 940 && hero.GetY() > 48 && hero.GetY() < 115) {
                 hero.SetX(65);
                 hero.SetY(586);
+                hero.ResetHealth();
                 return 2;
             }
-            if (hero.GetX() > 1730 && hero.GetX() < 1829 && hero.GetY() > 557 && hero.GetY() < 621) {
+            if (hero.GetX() > 1730 && hero.GetX() < 1829 && hero.GetY() > 557 && hero.GetY() < 621 && levelFinished[0]) {
                 hero.SetX(70);
                 hero.SetY(600);
+                hero.ResetHealth();
                 return 3;
             }
 
-            if (hero.GetX() > 883 && hero.GetX() < 947 && hero.GetY() > 1085 && hero.GetY() < 1143) {
+            if (hero.GetX() > 883 && hero.GetX() < 947 && hero.GetY() > 1085 && hero.GetY() < 1143 && levelFinished[1]) {
                 hero.SetX(70);
                 hero.SetY(1056);
+                hero.ResetHealth();
                 return 4;
             }
         }
         if(map.getMapID() == 1){
-            if(hero.GetX() > 1826 && hero.GetY() >110 && hero.GetY()<150){
+            if(hero.GetX() > 1826 && hero.GetY() >110 && hero.GetY()<150 && levelFinished[0]){
                 hero.SetX(960);
                 hero.SetY(640);
+                hero.ResetHealth();
                 return 1;
             }
         }
         if(map.getMapID() == 2){
-            if(hero.GetX() > 1790 && hero.GetY() >1125 && hero.GetY()<1181){
+            if(hero.GetX() > 1790 && hero.GetY() >1125 && hero.GetY()<1181 && levelFinished[1]){
                 hero.SetX(960);
                 hero.SetY(640);
+                hero.ResetHealth();
                 return 1;
             }
         }
         if(map.getMapID() == 3){
-            if(hero.GetX() > 1826 && hero.GetY() >466 && hero.GetY()<515){
+            if(hero.GetX() > 1826 && hero.GetY() >466 && hero.GetY()<515 && levelFinished[2]){
                 hero.SetX(960);
                 hero.SetY(640);
+                hero.ResetHealth();
                 return 1;
             }
         }
@@ -93,12 +140,43 @@ public class PlayState extends State implements PlayerLocationObserver
     /*! \fn public void Update()
         \brief Actualizeaza starea curenta a jocului.
      */
+    private void updateNPC(){
+        notEmpty = false;
+        for( int i = 0; i<npc.length; i++){
+            if(npc[map.getMapID()][i] != null) {
+                npc[map.getMapID()][i].Update();
+                notEmpty = true;
+            }
+        }
+        if(!notEmpty){
+            if(boss[map.getMapID()] == null){
+                levelFinished[map.getMapID()-1] = true;
+            }
+            boss[map.getMapID()-1].Update();
+        }
+    }
+    private void drawNPC(Graphics g){
+        notEmpty = false;
+        for(int i = 0; i<npc.length; i++){
+            if(npc[map.getMapID()][i] !=null) {
+                npc[map.getMapID()][i].Draw(g);
+                notEmpty = true;
+            }
+        }
+        if(!notEmpty){
+            if(boss[map.getMapID()] == null){
+                levelFinished[map.getMapID()-1] = true;
+            }
+            boss[map.getMapID()-1].Draw(g);
+        }
+    }
     @Override
     public void Update()
     {
         map.Update();
         hero.Update();
-        enem.Update();
+        updateNPC();
+        refLink.GetCollision().checkEntity(hero, npc[map.getMapID()]);
     }
 
     /*! \fn public void Draw(Graphics g)
@@ -113,13 +191,15 @@ public class PlayState extends State implements PlayerLocationObserver
             map.Draw(g, hero);
             map.DrawObjects(g);
             hero.Draw(g);
-            enem.Draw(g);
+            drawNPC(g);
         }else {
             map.Draw(g, hero);
-            enem.Draw(g);
             hero.Draw(g);
+            drawNPC(g);
             map.DrawObjects(g);
-
         }
+    }
+    public Hero GetHero(){
+        return this.hero;
     }
 }

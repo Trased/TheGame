@@ -2,12 +2,27 @@ package PaooGame.Items;
 
 import PaooGame.RefLinks;
 
+import java.awt.*;
+
 public class Collision {
     RefLinks ref;
+    private boolean enemCol = false;
+    Rectangle heroAttackBounds, heroNormalBounds, enemAttackBounds, enemNormalBounds;
     public Collision(RefLinks reflink){
         ref = reflink;
+        heroAttackBounds = new Rectangle(0,0,38,38);
+        heroNormalBounds  = new Rectangle(0,0,38,38);
+        enemAttackBounds  = new Rectangle(0,0,38,38);
+        enemNormalBounds  = new Rectangle(0,0,38,38);
+    }
+    public boolean GetEnemCol(){
+        return enemCol;
     }
     public void checkTile(Character entity) {
+        if(enemCol){
+            entity.collisionOn = true;
+            enemCol = false;
+        }
         int entityXLeftBorder = (int) (entity.GetX() + entity.normalBounds.x);
         int entityXNearLeftBorder = (int) (entity.GetX() + entity.normalBounds.x)+10;
         int entityXRightBorder = (int) (entity.GetX() + entity.normalBounds.x + entity.normalBounds.width)+10;
@@ -61,16 +76,37 @@ public class Collision {
             }
         }
     }
+    public void checkEntity(Hero hero, NPC[] enem){
+        int heroAttackBoundsX = (int) (hero.GetX() + hero.attackBounds.x);
+        int heroAttackBoundsY = (int) (hero.GetY() + hero.attackBounds.y);
+        int heroNormalBoundsX = (int) (hero.GetX() + hero.normalBounds.x);
+        int heroNormalBoundsY = (int) (hero.GetY() + hero.normalBounds.y);
+        int enemAttackBoundsX, enemAttackBoundsY,enemNormalBoundsX, enemNormalBoundsY;
+        heroAttackBounds.setLocation(heroAttackBoundsX,heroAttackBoundsY);
+        heroNormalBounds.setLocation(heroNormalBoundsX,heroNormalBoundsY);
+        for(int i = 0; i < enem.length; i++) {
+            if (enem[i] != null) {
+                enemAttackBoundsX = (int) (enem[i].GetX() + enem[i].attackBounds.x);
+                enemAttackBoundsY = (int) (enem[i].GetY() + enem[i].attackBounds.y);
+                enemNormalBoundsX = (int) (enem[i].GetX() + enem[i].normalBounds.x);
+                enemNormalBoundsY = (int) (enem[i].GetY() + enem[i].normalBounds.y);
+                enemAttackBounds.setLocation(enemAttackBoundsX, enemAttackBoundsY);
+                enemNormalBounds.setLocation(enemNormalBoundsX, enemNormalBoundsY);
+                if (heroAttackBounds.intersects(enemNormalBounds)) {
+                    if (hero.checkAttack) {
+                        enem[i].Damaged(hero);
+                        if (enem[i].life < 0) {
+                            enem[i] = null;
+                        }
+                    }
+                }
+
+                if(heroNormalBounds.intersects(enemNormalBounds)){
+                    enemCol =true;
+                    hero.SetX(hero.GetX()-1);
+                    hero.SetY(hero.GetY()-1);
+                }
+            }
+        }
+    }
 }
-// TO:DO
-// GIMP -> BACKGROUND TILE, REDO MAP MATRIX WITH NEW TILES, COLLISION CHECK WITH NEW OBJECTS , 10 MIN WORK.
-// ADD OBJECTS ON MAP
-// CREATE MAP FOR LEVEL 1-2-3
-// CREATE "TELEPORT" FOR LEVELS
-// ADD NPC ON MAP
-// ADD INTERACTIONS WITCH NPC
-// ADD GAME MENU
-// ADD MUSIC ??
-
-
-// 3 DESIGN PATTERNS!!!
