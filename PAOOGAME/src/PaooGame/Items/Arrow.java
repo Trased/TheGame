@@ -15,6 +15,7 @@ public class Arrow extends Item {
         super(refLink, x, y, width, height);
         image = Assets.arrow[direction];
         dir = direction;
+
     }
     protected Hero GetHero(){
         return refLink.GetGame().GetPlayState().GetHero();
@@ -33,17 +34,17 @@ public class Arrow extends Item {
     public void Update() {
         IsHit();
         if(dir == 0 ){
-            y-=5;
+            y-=10;
 
         }
         if(dir == 1){
-            y+=5;
+            y+=10;
         }
         if(dir == 2){
-            x-=5;
+            x-=10;
         }
         if(dir == 3){
-            x+=5;
+            x+=10;
         }
     }
 
