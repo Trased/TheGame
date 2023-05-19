@@ -399,6 +399,8 @@ public class Hero extends Character implements LocationSubject
     public void ResetHealth(){
         health = maxHealth;
     }
+    public void SetHealth(int hp){ health = hp;}
+    public int GetHealth(){ return health;}
     public Rectangle getNormalBounds(){
         trueBounds.setLocation((int) x + normalBounds.x, (int) y+normalBounds.y);
         return trueBounds;

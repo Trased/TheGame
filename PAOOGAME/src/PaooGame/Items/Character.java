@@ -11,8 +11,7 @@ import java.awt.image.BufferedImage;
     Notiunea este definita doar de viata, viteza de deplasare si distanta cu care trebuie sa se
     miste/deplaseze in urma calculelor.
  */
-public abstract class Character extends Item
-{
+public abstract class Character extends Item {
     public static final int DEFAULT_LIFE            = 10;   /*!< Valoarea implicita a vietii unui caracter.*/
     public static final float DEFAULT_SPEED         = 8.0f; /*!< Viteza implicita a unu caracter.*/
     public static final int DEFAULT_CREATURE_WIDTH  = 96;   /*!< Latimea implicita a imaginii caracterului.*/

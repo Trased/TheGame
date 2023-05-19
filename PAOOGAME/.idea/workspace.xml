@@ -6,8 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="9f63f0bd-07c3-4259-ad3b-2a5ee33c327f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PaooGame/Items/NPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Items/NPC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PaooGame/Items/Professor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Items/Professor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PaooGameEtapa1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PaooGameEtapa1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Items/Hero.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Items/Hero.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/RefLinks.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/RefLinks.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/States/EndGameState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/States/EndGameState.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/States/PlayState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/States/PlayState.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaooGame/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaooGame/Items/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Items/Character.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaooGame/Items/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Items/Hero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaooGame/RefLinks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/RefLinks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaooGame/States/EndGameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/States/EndGameState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PaooGame/States/PlayState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/States/PlayState.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,6 +48,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/PaooGame/Database/Database.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/PaooGame/Game.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/PaooGame/GameWindow/GameWindow.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/PaooGame/Graphics/Assets.java" root0="SKIP_INSPECTION" />
@@ -132,17 +142,22 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/!MyFiles/Fac/GITH/PLA/TheGame/PAOOGAME&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/!MyFiles/Fac/GITH/PLA/TheGame/PAOOGAME/res/database/sqlite-jdbc-3.7.2.jar&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
@@ -233,7 +248,8 @@
       <workItem from="1684426397374" duration="3079000" />
       <workItem from="1684435484024" duration="1001000" />
       <workItem from="1684473376234" duration="7660000" />
-      <workItem from="1684512174435" duration="5491000" />
+      <workItem from="1684512174435" duration="13189000" />
+      <workItem from="1684527843251" duration="3340000" />
     </task>
     <servers />
   </component>

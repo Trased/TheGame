@@ -1,7 +1,9 @@
 package PaooGame;
 
+import PaooGame.Database.Database;
 import PaooGame.Items.Collision;
 import PaooGame.Maps.Map;
+import java.sql.*;
 
 import PaooGame.Input.KeyManager;
 
@@ -14,12 +16,14 @@ public class RefLinks
 {
     private Game game;          /*!< Referinta catre obiectul Game.*/
     private Map map;            /*!< Referinta catre harta curenta.*/
+    private Database db = new Database(this);
     private  Collision col = new Collision(this);
 
     public final int maxWorldCol = 60;
     public final int maxWorldRow = 40;
     public final int worldCol = 32 * maxWorldCol;
     public final int worldRow = 32 * maxWorldRow;
+
     /*! \fn public RefLinks(Game game)
         \brief Constructorul de initializare al clasei.
 
@@ -90,4 +94,8 @@ public class RefLinks
     {
         this.map = map;
     }
+    public Database getDb() {
+        return db;
+    }
+
 }

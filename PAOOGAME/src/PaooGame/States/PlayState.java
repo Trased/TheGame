@@ -29,6 +29,8 @@ public class PlayState extends State implements PlayerLocationObserver
     NPCFactory warriorFactory = new WarriorFactory(refLink);
     private boolean npcSpawned[] = new boolean[3];
     private boolean bossSpawned[] = new boolean[3];
+    private static boolean gameFinished = false;
+    private boolean lastLevel = false;
 
 
     /*! \fn public PlayState(RefLinks refLink)
@@ -158,6 +160,7 @@ public class PlayState extends State implements PlayerLocationObserver
         } else if (map.getMapID() == 3 && !notEmpty && npcSpawned[2] && !bossSpawned[2]) {
             boss[2] = new Boss(refLink, 18 * Tile.TILE_HEIGHT, 11 * Tile.TILE_WIDTH, 3, 2);
             bossSpawned[2] = true;
+            lastLevel = true;
         }
     }
 
@@ -180,8 +183,10 @@ public class PlayState extends State implements PlayerLocationObserver
                 boss[map.getMapID() - 1].Update();
             }
         }
+        if(lastLevel && boss[2] == null){
+            gameFinished = true;
+        }
         if(npc[0][2].PlayerInteract() && refLink.GetKeyManager().enter){
-            System.out.println("PLAYER INTERACT");
             if(levelFinished[1] == true){
                 drawDialog[2] = true;
             }else if(levelFinished[0] == true){
@@ -309,5 +314,22 @@ public class PlayState extends State implements PlayerLocationObserver
     }
     public Hero GetHero(){
         return this.hero;
+    }
+    public void SetLevelFinished(int x){
+        for(int i = 0; i < x; i++){
+            levelFinished[i] = true;
+        }
+    }
+    public int GetLevelFinished(){
+        int x = 0;
+        for(int i = 0; i< levelFinished.length; i++){
+            if(levelFinished[i] == true){
+                x++;
+            }
+        }
+        return x;
+    }
+    public static boolean getGameFinished(){
+        return gameFinished;
     }
 }

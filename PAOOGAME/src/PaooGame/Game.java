@@ -1,5 +1,6 @@
 package PaooGame;
 
+import PaooGame.Database.Database;
 import PaooGame.GameWindow.GameWindow;
 import PaooGame.Graphics.Assets;
 import PaooGame.Input.KeyManager;
@@ -72,6 +73,7 @@ public class Game implements Runnable {
     private RefLinks refLink;            /*!< Referinta catre un obiect a carui sarcina este doar de a retine diverse referinte pentru a fi usor accesibile.*/
     private Tile tile; /*!< variabila membra temporara. Este folosita in aceasta etapa doar pentru a desena ceva pe ecran.*/
 
+
     /*! \fn public Game(String title, int width, int height)
         \brief Constructor de initializare al clasei Game.
 
@@ -116,7 +118,7 @@ public class Game implements Runnable {
         aboutState = new AboutState(refLink);
         heroDeadState = new HeroDeadState(refLink);
         ///Seteaza starea implicita cu care va fi lansat programul in executie
-        State.SetState(menuState);
+        State.SetState(aboutState);
     }
 
     /*! \fn public void run()
@@ -220,27 +222,34 @@ public class Game implements Runnable {
             }
             if (refLink.GetKeyManager().enter) {
                 if (State.GetState() == aboutState && AboutState.getCommNum() == 0) {
-                    // TO BE RE-DESIGNED AFTER ADDING DATABSE
+                    refLink.getDb().DatabaseNewGame();
                     State.SetState(playState);
-                }
-                if (State.GetState() == aboutState && AboutState.getCommNum() == 1) {
-                    // TO BE IMPLEMENTED AFTER ADDING DATABASE
-                }
-                if (State.GetState() == aboutState && AboutState.getCommNum() == 2) {
+                }else if (State.GetState() == aboutState && AboutState.getCommNum() == 1) {
+                    refLink.getDb().DatabaseLoadGame();
+                    State.SetState(playState);
+                }else if (State.GetState() == aboutState && AboutState.getCommNum() == 2) {
                     wnd.GetWndFrame().dispose();
                     System.exit(0);
-                }
-                if (State.GetState() == menuState && MenuState.getCommNum() == 0) {
+                }else if (State.GetState() == menuState && MenuState.getCommNum() == 0) {
                     State.SetState(playState);
-                }
-                if (State.GetState() == menuState && MenuState.getCommNum() == 1) {
-                    // TO BE IMPLEMENTED AFTER ADDING DATABASE
-                }
-                if (State.GetState() == heroDeadState && HeroDeadState.getCommNum() == 0){
+                }else if (State.GetState() == menuState && MenuState.getCommNum() == 1) {
+                    refLink.getDb().DatabaseSaveGame();
+                    wnd.GetWndFrame().dispose();
+                    System.exit(0);
+                }else if (State.GetState() == heroDeadState && HeroDeadState.getCommNum() == 0){
                     playState = new PlayState(refLink);
                     State.SetState(playState);
-                }
-                if(State.GetState() == heroDeadState && HeroDeadState.getCommNum() == 1){
+                }else if(State.GetState() == heroDeadState && HeroDeadState.getCommNum() == 1){
+                    wnd.GetWndFrame().dispose();
+                    System.exit(0);
+                }else if(State.GetState() == playState && PlayState.getGameFinished() ){
+                    State.SetState(endGameState);
+                }else if(State.GetState() == endGameState && EndGameState.getCommNum() == 0){
+                    refLink.getDb().DatabaseNewGame();
+                    playState = new PlayState(refLink);
+                    State.SetState(playState);
+                }else if(State.GetState() == endGameState && EndGameState.getCommNum() == 1){
+                    refLink.getDb().DatabaseSaveGame();
                     wnd.GetWndFrame().dispose();
                     System.exit(0);
                 }
