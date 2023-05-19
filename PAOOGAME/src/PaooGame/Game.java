@@ -3,6 +3,7 @@ package PaooGame;
 import PaooGame.GameWindow.GameWindow;
 import PaooGame.Graphics.Assets;
 import PaooGame.Input.KeyManager;
+import PaooGame.Items.Hero;
 import PaooGame.States.*;
 import PaooGame.Tiles.Tile;
 
@@ -64,8 +65,9 @@ public class Game implements Runnable {
     ///Available states
     private State playState;            /*!< Referinta catre joc.*/
     private State menuState;            /*!< Referinta catre menu.*/
-    private State settingsState;        /*!< Referinta catre setari.*/
+    private State endGameState;        /*!< Referinta catre setari.*/
     private State aboutState;           /*!< Referinta catre about.*/
+    private State heroDeadState;
     private KeyManager keyManager;      /*!< Referinta catre obiectul care gestioneaza intrarile din partea utilizatorului.*/
     private RefLinks refLink;            /*!< Referinta catre un obiect a carui sarcina este doar de a retine diverse referinte pentru a fi usor accesibile.*/
     private Tile tile; /*!< variabila membra temporara. Este folosita in aceasta etapa doar pentru a desena ceva pe ecran.*/
@@ -110,10 +112,11 @@ public class Game implements Runnable {
         ///Definirea starilor programului
         playState = new PlayState(refLink);
         menuState = new MenuState(refLink);
-        settingsState = new SettingsState(refLink);
+        endGameState = new EndGameState(refLink);
         aboutState = new AboutState(refLink);
+        heroDeadState = new HeroDeadState(refLink);
         ///Seteaza starea implicita cu care va fi lansat programul in executie
-        State.SetState(aboutState);
+        State.SetState(menuState);
     }
 
     /*! \fn public void run()
@@ -233,6 +236,14 @@ public class Game implements Runnable {
                 if (State.GetState() == menuState && MenuState.getCommNum() == 1) {
                     // TO BE IMPLEMENTED AFTER ADDING DATABASE
                 }
+                if (State.GetState() == heroDeadState && HeroDeadState.getCommNum() == 0){
+                    playState = new PlayState(refLink);
+                    State.SetState(playState);
+                }
+                if(State.GetState() == heroDeadState && HeroDeadState.getCommNum() == 1){
+                    wnd.GetWndFrame().dispose();
+                    System.exit(0);
+                }
             }
         }
     }
@@ -300,6 +311,9 @@ public class Game implements Runnable {
     }
     public PlayState GetPlayState(){
         return (PlayState) playState;
+    }
+    public void SetHeroDeadState(){
+        State.SetState(heroDeadState);
     }
 }
 

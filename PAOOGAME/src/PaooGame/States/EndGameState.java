@@ -9,14 +9,14 @@ import java.awt.*;
 
     Aici setarile vor trebui salvate/incarcate intr-un/dintr-un fisier/baza de date sqlite.
  */
-public class SettingsState extends State
+public class EndGameState extends State
 {
     /*! \fn public SettingsState(RefLinks refLink)
         \brief Constructorul de initializare al clasei.
 
         \param refLink O referinta catre un obiect "shortcut", obiect ce contine o serie de referinte utile in program.
      */
-    public SettingsState(RefLinks refLink)
+    public EndGameState(RefLinks refLink)
     {
             ///Apel al construcotrului clasei de baza.
         super(refLink);

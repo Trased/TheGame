@@ -4,38 +4,19 @@ import PaooGame.RefLinks;
 
 import java.awt.*;
 
-/*! \class public class MenuState extends State
-    \brief Implementeaza notiunea de menu pentru joc.
- */
-public class MenuState extends State
-{
+public class HeroDeadState extends State{
     private static int commNum;
     private boolean upPressed = false;
     private boolean downPressed = false;
-    /*! \fn public MenuState(RefLinks refLink)
-        \brief Constructorul de initializare al clasei.
-
-        \param refLink O referinta catre un obiect "shortcut", obiect ce contine o serie de referinte utile in program.
-     */
-    public MenuState(RefLinks refLink)
-    {
-            ///Apel al constructorului clasei de baza.
+    public HeroDeadState(RefLinks refLink) {
         super(refLink);
     }
-    /*! \fn public void Update()
-        \brief Actualizeaza starea curenta a meniului.
-     */
+
     @Override
-    public void Update()
-    {
+    public void Update() {
 
     }
 
-    /*! \fn public void Draw(Graphics g)
-        \brief Deseneaza (randeaza) pe ecran starea curenta a meniului.
-
-        \param g Contextul grafic in care trebuie sa deseneze starea jocului pe ecran.
-     */
     @Override
     public void Draw(Graphics g) {
         // Title
@@ -50,19 +31,19 @@ public class MenuState extends State
         g.drawString(text, x, y);
 
         //Menu
-        text = "GAME IS PAUSED";
+        text = "YOUR HERO DIED";
         g.setFont(g.getFont().deriveFont(Font.PLAIN, 48F));
         x = 280;
         y = 300;
         g.drawString(text, x, y);
 
         g.setFont(g.getFont().deriveFont(Font.PLAIN, 32F));
-        text = "RESUME";
+        text = "NEW GAME";
         x = 310;
         y = 350;
         g.drawString(text, x, y);
 
-        text = "SAVE AND EXIT";
+        text = "EXIT";
         x = 310;
         y = 400;
         g.drawString(text, x, y);
@@ -71,7 +52,7 @@ public class MenuState extends State
         switch (commNum) {
             case 0 -> g.drawString(">", 295, 350);
             case 1 -> g.drawString(">", 295, 400);
-            }
+        }
     }
 
     private void checkInput(){

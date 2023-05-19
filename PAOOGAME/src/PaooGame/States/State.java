@@ -18,9 +18,11 @@ public abstract class State
     private static State previousState  = null; /*!< Referinta catre starea anterioara a jocului.*/
     private static State currentState   = null; /*!< Referinta catre starea curenta a jocului: game, meniu, settings, about etc.*/
     protected RefLinks refLink;
+    Font gameFont;
     public State(RefLinks refLink)
     {
         this.refLink = refLink;
+        gameFont = new Font("Bahnschrift", Font.PLAIN, 40);
     }
 
     /*! \fn public static void SetState(State state)

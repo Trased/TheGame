@@ -6,14 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="9f63f0bd-07c3-4259-ad3b-2a5ee33c327f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PaooGame/Items/Archer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Items/Archer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PaooGame/Items/Arrow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Items/Arrow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PaooGame/Items/Boss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Items/Boss.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PaooGame/Items/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Items/Character.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PaooGame/Items/Collision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Items/Collision.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaooGame/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PaooGame/Items/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Items/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PaooGame/Items/NPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Items/NPC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PaooGame/States/PlayState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/States/PlayState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaooGame/States/AboutState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/States/AboutState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaooGame/States/MenuState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/States/MenuState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaooGame/States/SettingsState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/States/EndGameState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaooGame/States/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/States/State.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -237,7 +235,8 @@
       <workItem from="1684407090633" duration="8797000" />
       <workItem from="1684426397374" duration="3079000" />
       <workItem from="1684435484024" duration="1001000" />
-      <workItem from="1684473376234" duration="6034000" />
+      <workItem from="1684473376234" duration="7660000" />
+      <workItem from="1684512174435" duration="307000" />
     </task>
     <servers />
   </component>

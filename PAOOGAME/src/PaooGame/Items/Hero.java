@@ -78,6 +78,11 @@ public class Hero extends Character implements LocationSubject
         screenY = refLink.GetHeight() / 2;
 
     }
+    public void CheckIfAlive(){
+        if(health <= 0){
+            refLink.GetGame().SetHeroDeadState();
+        }
+    }
     @Override
     public void registerObserver(PlayerLocationObserver observer) {
         observers.add(observer);
@@ -106,6 +111,7 @@ public class Hero extends Character implements LocationSubject
     @Override
     public void Update()
     {
+        CheckIfAlive();
             ///Verifica daca a fost apasata o tasta
         GetInput();
             ///Actualizeaza pozitia

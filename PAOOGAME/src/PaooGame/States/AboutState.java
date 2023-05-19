@@ -14,7 +14,6 @@ public class AboutState extends State
     private static int commNum;
     private boolean upPressed = false;
     private boolean downPressed = false;
-    Font gameFont;
     /*! \fn public AboutState(RefLinks refLink)
         \brief Constructorul de initializare al clasei.
 
@@ -24,7 +23,6 @@ public class AboutState extends State
     {
             ///Apel al constructorului clasei de baza.
         super(refLink);
-        gameFont = new Font("Bahnschrift", Font.PLAIN, 40);
 
     }
     /*! \fn public void Update()
