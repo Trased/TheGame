@@ -19,6 +19,7 @@ public abstract class NPC extends Character {
     protected int SPRITE_NUM = 1;
     protected boolean attack = false;
     protected Rectangle atBounds;
+    private final Rectangle intBounds;
 
     public NPC(RefLinks refLink, float x, float y, int damage)
     {
@@ -26,17 +27,22 @@ public abstract class NPC extends Character {
         this.damage= damage;
         speed = 1f;
         move = 1;
+
         normalBounds.x = 35;
         normalBounds.y = 35;
         normalBounds.width = 24;
         normalBounds.height = 40;
+
         attackBounds.x = 10;
         attackBounds.y = 10;
         attackBounds.width = 38;
         attackBounds.height = 38;
 
         atBounds = new Rectangle((int) x + attackBounds.x, (int) y+attackBounds.y, attackBounds.width, attackBounds.height);
-
+        intBounds= new Rectangle((int)x,(int)y,60,60);
+    }
+    public boolean PlayerInteract(){
+        return intBounds.intersects(GetHero().getNormalBounds());
     }
 
     public int RandomNumber(){

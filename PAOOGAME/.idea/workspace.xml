@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="9f63f0bd-07c3-4259-ad3b-2a5ee33c327f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/levels/Level1Objects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/levels/Level1Objects.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/levels/Level2Objects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/levels/Level2Objects.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/levels/Level3Objects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/levels/Level3Objects.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaooGame/Items/NPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Items/NPC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaooGame/Items/Professor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Items/Professor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaooGame/States/PlayState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/States/PlayState.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,7 +233,7 @@
       <workItem from="1684426397374" duration="3079000" />
       <workItem from="1684435484024" duration="1001000" />
       <workItem from="1684473376234" duration="7660000" />
-      <workItem from="1684512174435" duration="943000" />
+      <workItem from="1684512174435" duration="5491000" />
     </task>
     <servers />
   </component>

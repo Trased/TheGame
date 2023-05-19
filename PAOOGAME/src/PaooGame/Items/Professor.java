@@ -3,8 +3,11 @@ package PaooGame.Items;
 import PaooGame.Graphics.Assets;
 import PaooGame.RefLinks;
 
+import java.awt.*;
+
 public class Professor extends NPC{
     boolean up= false;
+
     public Professor(RefLinks refLink, float x, float y, int damage) {
         super(refLink, x, y, damage);
         image = Assets.FirstNpcOne;
@@ -28,9 +31,5 @@ public class Professor extends NPC{
         else {
             up = true;
         }
-    }
-
-    public void Interact(Hero player) {
-        // Display NPC message to the player
     }
 }

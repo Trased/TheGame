@@ -23,6 +23,8 @@ public class PlayState extends State implements PlayerLocationObserver
     private Map map;    /*!< Referinta catre harta curenta.*/
     private boolean[] levelFinished = new boolean[4];
     private boolean notEmpty;
+    private boolean drawDialog[] = new boolean[3];
+    private boolean startGame = true;
     NPCFactory archerFactory = new ArcherFactory(refLink);
     NPCFactory warriorFactory = new WarriorFactory(refLink);
     private boolean npcSpawned[] = new boolean[3];
@@ -116,7 +118,6 @@ public class PlayState extends State implements PlayerLocationObserver
         map.setMapID(level-1);
     }
 
-
     private void checkMap() {
         if (map.getMapID() == 1 && !npcSpawned[0]) {
             npc[1][0] = archerFactory.createArcher(8 * Tile.TILE_HEIGHT, 4 * Tile.TILE_WIDTH, 1);
@@ -179,6 +180,82 @@ public class PlayState extends State implements PlayerLocationObserver
                 boss[map.getMapID() - 1].Update();
             }
         }
+        if(npc[0][2].PlayerInteract() && refLink.GetKeyManager().enter){
+            System.out.println("PLAYER INTERACT");
+            if(levelFinished[1] == true){
+                drawDialog[2] = true;
+            }else if(levelFinished[0] == true){
+                drawDialog[1] = true;
+            }else{
+                drawDialog[0] = true;
+            }
+        }
+    }
+    private void drawDialog(Graphics g){
+        int x =(int) hero.GetX()-hero.screenX;
+        int y =(int) hero.GetY()-hero.screenY;
+        g.setFont(gameFont);
+        g.setFont(g.getFont().deriveFont(Font.BOLD, 24F));
+        if(drawDialog[0]){
+            startGame = false;
+            g.setColor(Color.BLACK);
+            g.fillRect(x,y,960,138);
+            String text = "Hello Son! Welcome to a new journey.If you want to attack someone, please press 'E'.";
+            y +=32;
+            g.setColor(Color.WHITE);
+            g.drawString(text, x, y);
+            text = "In order to start your journey, please follow the road to the North and receive";
+            y +=32;
+            g.drawString(text, x, y);
+            text = "information about Yoru from The Jailer. After you've received the information,";
+            y +=32;
+            g.drawString(text, x, y);
+            text = "take the road from top-right side to get home. Beware the Archers!";
+            y +=32;
+            g.drawString(text, x, y);
+            if(!npc[0][2].PlayerInteract()){
+                drawDialog[0] = false;
+            }
+        }else if(drawDialog[1]){
+            g.fillRect(x,y,960,138);
+            String text = "Well Done! As I've expected, The Jailer wouldn't talk much about it...";
+            y +=32;
+            g.setColor(Color.WHITE);
+            g.drawString(text, x, y);
+            text = "Let's try to 'talk' with Razu, The Traitor... hope his information will help us.";
+            y +=32;
+            g.drawString(text, x, y);
+            text = "He is hiding in the Necropolis Catacombs... heard rumours that no one went back";
+            y +=32;
+            g.drawString(text, x, y);
+            text = "from there... All I can say is ... Good Luck Champion! Beware the Warriors!";
+            y +=32;
+            g.drawString(text, x, y);
+
+        }else if(drawDialog[2]){
+            g.fillRect(x,y,960,138);
+            String text = "That's great news! I've always expected that the Yoru is hiding in ";
+            y +=32;
+            g.setColor(Color.WHITE);
+            g.drawString(text, x, y);
+            text = "Brackenhide Hollow. Head there, you have my Blessing. Please get the crown";
+            y +=32;
+            g.drawString(text, x, y);
+            text = "back to the King.";
+            y +=32;
+            g.drawString(text, x, y);
+        }
+        if(startGame){
+            g.setFont(gameFont);
+            g.setFont(g.getFont().deriveFont(Font.BOLD, 24F));
+            g.setColor(Color.BLACK);
+            g.fillRect(x,y,960,40);
+            String text = "Please talk with the Professor Andrew. Go near him and press 'ENTER' ";
+            y+=32;
+            x+=64;
+            g.setColor(Color.WHITE);
+            g.drawString(text, x, y);
+        }
     }
     private void drawNPC(Graphics g){
         notEmpty = false;
@@ -214,8 +291,7 @@ public class PlayState extends State implements PlayerLocationObserver
         \param g Contextul grafic in care trebuie sa deseneze starea jocului pe ecran.
      */
     @Override
-    public void Draw(Graphics g)
-    {
+    public void Draw(Graphics g) {
         if(map.getMapID()==1){
             map.Draw(g, hero);
             map.DrawObjects(g);
@@ -228,6 +304,7 @@ public class PlayState extends State implements PlayerLocationObserver
             drawNPC(g);
             map.DrawObjects(g);
             hero.DrawHealth(g);
+            drawDialog(g);
         }
     }
     public Hero GetHero(){
