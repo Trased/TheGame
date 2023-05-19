@@ -8,7 +8,12 @@ public class Boss extends NPC{
     private final int id;
     public Boss(RefLinks refLink, float x, float y, int damage,int id) {
         super(refLink, x, y, damage);
-        life = 100;
+        switch (id) {
+            case 0 -> speed = 3f;
+            case 1 -> speed = 3.5f;
+            case 2 -> speed = 4f;
+        }
+        life = 50;
         movingAreaXL = x - 900;
         movingAreaXR = x + 900;
         movingAreaYU = y - 900;
@@ -21,6 +26,8 @@ public class Boss extends NPC{
 
     @Override
     public void Update() {
+        playerNearby = false;
+        CheckForPlayer();
         NPCMove();
         Move();
         atBounds.setLocation((int) x + attackBounds.x, (int) y+attackBounds.y);

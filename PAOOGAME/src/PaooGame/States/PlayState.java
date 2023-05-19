@@ -23,6 +23,11 @@ public class PlayState extends State implements PlayerLocationObserver
     private Map map;    /*!< Referinta catre harta curenta.*/
     private boolean[] levelFinished = new boolean[4];
     private boolean notEmpty;
+    NPCFactory archerFactory = new ArcherFactory(refLink);
+    NPCFactory warriorFactory = new WarriorFactory(refLink);
+    private boolean npcSpawned[] = new boolean[3];
+    private boolean bossSpawned[] = new boolean[3];
+
 
     /*! \fn public PlayState(RefLinks refLink)
         \brief Constructorul de initializare al clasei
@@ -42,38 +47,12 @@ public class PlayState extends State implements PlayerLocationObserver
         hero.registerObserver(this);
         npc = new NPC[4][10];
         boss = new NPC[3];
-        NPCFactory archerFactory = new ArcherFactory(refLink);
-        NPCFactory warriorFactory = new WarriorFactory(refLink);
-
-        npc[1][0] = archerFactory.createArcher(32*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
-        npc[1][1] = archerFactory.createArcher(32*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
-        npc[1][2] = archerFactory.createArcher(32*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
-        npc[1][3] = archerFactory.createArcher(32*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
-        npc[1][4] = archerFactory.createArcher(32*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
-        npc[1][5] = archerFactory.createArcher(32*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
-        npc[1][6] = archerFactory.createArcher(32*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
-        npc[1][7] = archerFactory.createArcher(32*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
-        boss[0] = new Boss(refLink,32* Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 2, 0);
-
-        npc[2][1] = warriorFactory.createWarrior(34*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
-        npc[2][2] = warriorFactory.createWarrior(34*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
-        npc[2][3] = warriorFactory.createWarrior(34*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
-        npc[2][4] = warriorFactory.createWarrior(34*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
-        npc[2][5] = warriorFactory.createWarrior(34*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
-        npc[2][6] = warriorFactory.createWarrior(34*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
-        npc[2][7] = warriorFactory.createWarrior(34*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
-        boss[1] = new Boss(refLink,32* Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 2, 1);
-
-        npc[3][0] = warriorFactory.createWarrior(34*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
-        npc[3][1] = warriorFactory.createWarrior(34*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
-        npc[3][2] = warriorFactory.createWarrior(34*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
-        npc[3][3] = warriorFactory.createWarrior(34*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
-        npc[3][4] = warriorFactory.createWarrior(34*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
-        npc[3][5] = archerFactory.createArcher(34*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
-        npc[3][6] = archerFactory.createArcher(34*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
-        npc[3][7] = archerFactory.createArcher(34*Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 1);
-
-        boss[2] = new Boss(refLink,32* Tile.TILE_HEIGHT, 22*Tile.TILE_WIDTH, 2, 2);
+        npcSpawned[0] = false;
+        npcSpawned[1] = false;
+        npcSpawned[2] = false;
+        bossSpawned[0] = false;
+        bossSpawned[1] = false;
+        bossSpawned[2] = false;
 
         npc[0][2] = new Professor(refLink, 36*Tile.TILE_HEIGHT, 11*Tile.TILE_WIDTH, 0);
     }
@@ -137,37 +116,86 @@ public class PlayState extends State implements PlayerLocationObserver
         map.setMapID(level-1);
     }
 
+
+    private void checkMap() {
+        if (map.getMapID() == 1 && !npcSpawned[0]) {
+            npc[1][0] = archerFactory.createArcher(8 * Tile.TILE_HEIGHT, 4 * Tile.TILE_WIDTH, 1);
+            npc[1][1] = archerFactory.createArcher(22 * Tile.TILE_HEIGHT, 19 * Tile.TILE_WIDTH, 1);
+            npc[1][2] = archerFactory.createArcher(23 * Tile.TILE_HEIGHT, 31 * Tile.TILE_WIDTH, 1);
+            npc[1][3] = archerFactory.createArcher(43 * Tile.TILE_HEIGHT, 28 * Tile.TILE_WIDTH, 1);
+            npc[1][4] = archerFactory.createArcher(52 * Tile.TILE_HEIGHT, 16 * Tile.TILE_WIDTH, 1);
+            npc[1][5] = archerFactory.createArcher(49 * Tile.TILE_HEIGHT, 3 * Tile.TILE_WIDTH, 1);
+            npc[1][6] = archerFactory.createArcher(32 * Tile.TILE_HEIGHT, 22 * Tile.TILE_WIDTH, 1);
+            npc[1][7] = archerFactory.createArcher(32 * Tile.TILE_HEIGHT, 22 * Tile.TILE_WIDTH, 1);
+            npcSpawned[0] = true;
+        } else if (map.getMapID() == 1 && !notEmpty && npcSpawned[0] && !bossSpawned[0]) {
+            boss[0] = new Boss(refLink, 32 * Tile.TILE_HEIGHT, 22 * Tile.TILE_WIDTH, 1, 0);
+            bossSpawned[0] = true;
+        } else if (map.getMapID() == 2 && !npcSpawned[1]) {
+            npc[2][1] = warriorFactory.createWarrior(15 * Tile.TILE_HEIGHT, 32 * Tile.TILE_WIDTH, 1);
+            npc[2][2] = warriorFactory.createWarrior(2 * Tile.TILE_HEIGHT, 3 * Tile.TILE_WIDTH, 1);
+            npc[2][3] = warriorFactory.createWarrior(34 * Tile.TILE_HEIGHT, 15 * Tile.TILE_WIDTH, 1);
+            npc[2][4] = warriorFactory.createWarrior(41 * Tile.TILE_HEIGHT, 7 * Tile.TILE_WIDTH, 1);
+            npc[2][5] = warriorFactory.createWarrior(53 * Tile.TILE_HEIGHT, 28 * Tile.TILE_WIDTH, 1);
+            npc[2][6] = warriorFactory.createWarrior(42 * Tile.TILE_HEIGHT, 22 * Tile.TILE_WIDTH, 1);
+            npc[2][7] = warriorFactory.createWarrior(45 * Tile.TILE_HEIGHT, 28 * Tile.TILE_WIDTH, 1);
+            npcSpawned[1] = true;
+        } else if (map.getMapID() == 2 && npcSpawned[1] && !notEmpty && !bossSpawned[1]) {
+            boss[1] = new Boss(refLink, 47 * Tile.TILE_HEIGHT, 25 * Tile.TILE_WIDTH, 2, 1);
+            bossSpawned[1] = true;
+        } else if (map.getMapID() == 3 && !npcSpawned[2]) {
+            npc[3][0] = warriorFactory.createWarrior(41 * Tile.TILE_HEIGHT, 5 * Tile.TILE_WIDTH, 1);
+            npc[3][1] = warriorFactory.createWarrior(40 * Tile.TILE_HEIGHT, 31 * Tile.TILE_WIDTH, 1);
+            npc[3][2] = warriorFactory.createWarrior(40 * Tile.TILE_HEIGHT, 16 * Tile.TILE_WIDTH, 1);
+            npc[3][3] = warriorFactory.createWarrior(25 * Tile.TILE_HEIGHT, 5 * Tile.TILE_WIDTH, 1);
+            npc[3][4] = warriorFactory.createWarrior(11 * Tile.TILE_HEIGHT, 18 * Tile.TILE_WIDTH, 1);
+            npc[3][5] = archerFactory.createArcher(55 * Tile.TILE_HEIGHT, 14 * Tile.TILE_WIDTH, 1);
+            npc[3][6] = archerFactory.createArcher(55 * Tile.TILE_HEIGHT, 16 * Tile.TILE_WIDTH, 1);
+            npc[3][7] = archerFactory.createArcher(55 * Tile.TILE_HEIGHT, 31 * Tile.TILE_WIDTH, 1);
+            npc[3][8] = archerFactory.createArcher(57 * Tile.TILE_HEIGHT, 33 * Tile.TILE_WIDTH, 1);
+            npcSpawned[2] = true;
+        } else if (map.getMapID() == 3 && !notEmpty && npcSpawned[2] && !bossSpawned[2]) {
+            boss[2] = new Boss(refLink, 18 * Tile.TILE_HEIGHT, 11 * Tile.TILE_WIDTH, 3, 2);
+            bossSpawned[2] = true;
+        }
+    }
+
     /*! \fn public void Update()
         \brief Actualizeaza starea curenta a jocului.
      */
     private void updateNPC(){
+        checkMap();
         notEmpty = false;
-        for( int i = 0; i<npc.length; i++){
+        for( int i = 0; i<npc[map.getMapID()].length; i++){
             if(npc[map.getMapID()][i] != null) {
                 npc[map.getMapID()][i].Update();
                 notEmpty = true;
             }
         }
         if(!notEmpty){
-            if(boss[map.getMapID()] == null){
+            if(boss[map.getMapID()-1] == null){
                 levelFinished[map.getMapID()-1] = true;
+            }else {
+                boss[map.getMapID() - 1].Update();
             }
-            boss[map.getMapID()-1].Update();
         }
     }
     private void drawNPC(Graphics g){
         notEmpty = false;
-        for(int i = 0; i<npc.length; i++){
+        for(int i = 0; i<npc[map.getMapID()].length; i++){
             if(npc[map.getMapID()][i] !=null) {
                 npc[map.getMapID()][i].Draw(g);
+                npc[map.getMapID()][i].DrawHealth(g);
                 notEmpty = true;
             }
         }
         if(!notEmpty){
-            if(boss[map.getMapID()] == null){
+            if(boss[map.getMapID() - 1] == null){
                 levelFinished[map.getMapID()-1] = true;
+            }else {
+                boss[map.getMapID() - 1].Draw(g);
+                boss[map.getMapID() - 1].DrawHealth(g);
             }
-            boss[map.getMapID()-1].Draw(g);
         }
     }
     @Override
@@ -177,6 +205,7 @@ public class PlayState extends State implements PlayerLocationObserver
         hero.Update();
         updateNPC();
         refLink.GetCollision().checkEntity(hero, npc[map.getMapID()]);
+        refLink.GetCollision().checkEntity(hero,boss);
     }
 
     /*! \fn public void Draw(Graphics g)
@@ -192,11 +221,13 @@ public class PlayState extends State implements PlayerLocationObserver
             map.DrawObjects(g);
             hero.Draw(g);
             drawNPC(g);
+            hero.DrawHealth(g);
         }else {
             map.Draw(g, hero);
             hero.Draw(g);
             drawNPC(g);
             map.DrawObjects(g);
+            hero.DrawHealth(g);
         }
     }
     public Hero GetHero(){

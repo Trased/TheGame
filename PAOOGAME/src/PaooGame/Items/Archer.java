@@ -143,7 +143,7 @@ public class Archer extends NPC {
         }
         if(attack && (atBoundsUD.intersects(GetHero().getNormalBounds()) || atBoundsLR.intersects(GetHero().getNormalBounds())) && checkAttackSprite()){
             oneTime++;
-            if(oneTime > 24) {
+            if(oneTime > 15) {
                 for(int i = 0; i < arr.length; i++){
                     if(arr[i] == null) {
                         arr[i] = new Arrow(refLink, x+32, y+32, 32, 32, move);

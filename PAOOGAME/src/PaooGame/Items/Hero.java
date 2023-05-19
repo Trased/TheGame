@@ -8,6 +8,8 @@ import PaooGame.Observer.LocationSubject;
 import PaooGame.Observer.PlayerLocationObserver;
 import PaooGame.RefLinks;
 import PaooGame.Graphics.Assets;
+import PaooGame.Tiles.Tile;
+
 import static java.lang.Math.sqrt;
 
 /*! \class public class Hero extends Character
@@ -24,6 +26,7 @@ public class Hero extends Character implements LocationSubject
     private BufferedImage image;    /*!< Referinta catre imaginea curenta a eroului.*/
     private int damage;
     private int health;
+    private int maxHealth;
 
     ///Fixam caracterul pe mijlocul ecranului
     public final int screenX;
@@ -60,8 +63,9 @@ public class Hero extends Character implements LocationSubject
         normalBounds.width = 24;
         normalBounds.height = 40;
 
-        damage = 50;
+        damage = 5;
         health = 500;
+        maxHealth = health;
             ///Stabilieste pozitia relativa si dimensiunea dreptunghiului de coliziune, starea de atac
         attackBounds.x =30;
         attackBounds.y = 0;
@@ -374,6 +378,11 @@ public class Hero extends Character implements LocationSubject
         g.fillRect((int)(x + attackBounds.x), (int)(y + attackBounds.y), attackBounds.width, attackBounds.height);
          */
     }
+    public void DrawHealth(Graphics g){
+        for(int i = 0; i< health/100; i++){
+            g.drawImage(heart, (int)x+i*26-screenX, (int)y-screenY, 25, 25, null);
+        }
+    }
     public int getDamage(){
         checkAttack = false;
         return damage;
@@ -382,7 +391,7 @@ public class Hero extends Character implements LocationSubject
         health -= damage;
     }
     public void ResetHealth(){
-        health = 300;
+        health = maxHealth;
     }
     public Rectangle getNormalBounds(){
         trueBounds.setLocation((int) x + normalBounds.x, (int) y+normalBounds.y);

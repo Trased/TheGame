@@ -43,9 +43,6 @@ public abstract class NPC extends Character {
         return (int) (Math.random()* 3.99);
     }
 
-    public void Attack(Hero player) {
-        player.HeroDamage(damage);
-    }
     public void Damaged(Hero player){
         this.life -= player.getDamage();
     }
@@ -204,6 +201,11 @@ public abstract class NPC extends Character {
             }
         }
     }
+    public void DrawHealth(Graphics g){
+        for(int i = 0; i< life/10; i++){
+            g.drawImage(heart, (int)x+20+i*21, (int)y, 20, 20, null);
+        }
+    }
     @Override
     public void Draw(Graphics g) {
         // Draw enemy sprite
@@ -211,7 +213,8 @@ public abstract class NPC extends Character {
 /*
         g.setColor(Color.cyan);
         g.fillRect((int)(movingAreaXL),(int)(movingAreaYU),(int)400, (int)400);
-*/
+
+
         g.setColor(Color.green);
         g.fillRect((int)(x + bounds.x), (int)(y + bounds.y), bounds.width, bounds.height);
 /*

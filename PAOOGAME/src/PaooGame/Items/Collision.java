@@ -95,7 +95,7 @@ public class Collision {
                 if (heroAttackBounds.intersects(enemNormalBounds)) {
                     if (hero.checkAttack) {
                         enem[i].Damaged(hero);
-                        if (enem[i].life < 0) {
+                        if (enem[i].life <= 0) {
                             enem[i] = null;
                         }
                     }

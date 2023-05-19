@@ -20,7 +20,6 @@ public class Arrow extends Item {
         return refLink.GetGame().GetPlayState().GetHero();
     }
     public boolean IsHit(){
-        //System.out.println(" CHECK CHECK "+ x + " " + y);
         trueBounds.setLocation((int)x,(int)y);
         if(trueBounds.intersects(GetHero().getNormalBounds()))
         {

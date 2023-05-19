@@ -6,34 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="9f63f0bd-07c3-4259-ad3b-2a5ee33c327f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Graphics/Assets.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Graphics/Assets.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Input/KeyManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Input/KeyManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Items/Character.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Items/Character.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Items/Collision.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Items/Collision.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Items/Enemy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Items/Hero.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Items/Hero.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Items/NPC.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/Items/NPC.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/RefLinks.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/RefLinks.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/States/PlayState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/States/PlayState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/States/State.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/PaooGame/States/State.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PaooGameEtapa1/textures/HomeMadeTileSet.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PaooGameEtapa1/textures/HomeMadeTileSet.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/textures/HomeMadeTileSet.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/textures/HomeMadeTileSet.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PaooGame/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PaooGame/Graphics/Assets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Graphics/Assets.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PaooGame/Graphics/SpriteSheet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Graphics/SpriteSheet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PaooGame/Input/KeyManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Input/KeyManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PaooGame/Items/Archer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Items/Archer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaooGame/Items/Arrow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Items/Arrow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaooGame/Items/Boss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Items/Boss.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PaooGame/Items/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Items/Character.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PaooGame/Items/Collision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Items/Collision.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PaooGame/Items/Enemy.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PaooGame/Items/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Items/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PaooGame/Items/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Items/Item.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PaooGame/Items/NPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Items/NPC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PaooGame/Items/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/Items/Warrior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PaooGame/RefLinks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/RefLinks.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PaooGame/States/PlayState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/States/PlayState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PaooGame/States/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaooGame/States/State.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -256,7 +236,8 @@
       <workItem from="1684401255510" duration="5752000" />
       <workItem from="1684407090633" duration="8797000" />
       <workItem from="1684426397374" duration="3079000" />
-      <workItem from="1684435484024" duration="627000" />
+      <workItem from="1684435484024" duration="1001000" />
+      <workItem from="1684473376234" duration="6034000" />
     </task>
     <servers />
   </component>

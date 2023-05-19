@@ -1,6 +1,9 @@
 package PaooGame.Items;
 
+import PaooGame.Graphics.Assets;
 import PaooGame.RefLinks;
+
+import java.awt.image.BufferedImage;
 
 /*! \class public abstract class Character extends Item
     \brief Defineste notiunea abstracta de caracter/individ/fiinta din joc.
@@ -20,6 +23,7 @@ public abstract class Character extends Item
     protected float xMove;  /*!< Retine noua pozitie a caracterului pe axa X.*/
     protected float yMove;  /*!< Retine noua pozitie a caracterului pe axa Y.*/
     protected boolean checkAttack = false;
+    protected BufferedImage heart = Assets.heart;
 
     /*! \fn public Character(RefLinks refLink, float x, float y, int width, int height)
         \brief Constructor de initializare al clasei Character
